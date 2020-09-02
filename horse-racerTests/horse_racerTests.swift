@@ -2,9 +2,6 @@
 //  horse_racerTests.swift
 //  horse-racerTests
 //
-//  Created by David Gray on 01/09/2020.
-//  Copyright © 2020 whalebeam. All rights reserved.
-//
 
 import XCTest
 @testable import horse_racer
