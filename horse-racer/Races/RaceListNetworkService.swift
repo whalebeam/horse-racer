@@ -9,6 +9,8 @@
 import Foundation
 
 
+// TODO: Fix networking to pull in from a local json file
+
 final class RaceListNetworkService {
     
     var isDebug: Bool {

@@ -17,7 +17,9 @@ final class RaceCell: UITableViewCell {
     var nameLabel: UILabel = {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.font = UIFont.boldSystemFont(ofSize: 21.0)
+        l.numberOfLines = 0
+        l.font = UIFont.preferredFont(forTextStyle: .title2)
+        l.adjustsFontForContentSizeCategory = true
         
         return l
     }()
@@ -25,6 +27,10 @@ final class RaceCell: UITableViewCell {
     var courseLabel: UILabel = {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
+        l.numberOfLines = 0
+        l.font = UIFont.preferredFont(forTextStyle: .headline)
+        l.adjustsFontForContentSizeCategory = true
+        
         return l
     }()
     
@@ -33,6 +39,7 @@ final class RaceCell: UITableViewCell {
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        
         return stackView
     }()
     
