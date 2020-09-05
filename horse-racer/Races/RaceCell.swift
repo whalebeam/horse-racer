@@ -17,7 +17,7 @@ final class RaceCell: UITableViewCell {
     var nameLabel: UILabel = {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.font = UIFont.boldSystemFont(ofSize: 24.0)
+        l.font = UIFont.boldSystemFont(ofSize: 21.0)
         
         return l
     }()
@@ -48,7 +48,7 @@ final class RaceCell: UITableViewCell {
         stackView.addArrangedSubview(nameLabel)
         stackView.addArrangedSubview(courseLabel)
         
-        contentView.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0)
+        contentView.backgroundColor = UIColor(named: "race_list_cell_background_color")
         
         contentView.layer.cornerRadius = 10
         contentView.clipsToBounds = true

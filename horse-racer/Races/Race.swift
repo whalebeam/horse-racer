@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct Race: Decodable {
+struct Race: Decodable, Equatable {
     let name: String
     let course_name: String
     let age: String
@@ -20,13 +20,13 @@ struct Race: Decodable {
 }
 
 
-struct Ride: Decodable {
+struct Ride: Decodable, Equatable {
     let cloth_number: Int
     let horse: Horse
 }
 
 
-struct Horse: Decodable {
+struct Horse: Decodable, Equatable {
     let name: String
     let days_since_last_run: Int
     let foaled: String // could be date type

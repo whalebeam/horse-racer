@@ -32,32 +32,28 @@ class RaceListViewController: UIViewController {
     
     let tableView: UITableView = .init()
     
-    var errorView: UIView = {
-       
-        let v = UIView()
-        let l = UILabel()
+    private let refreshControl: UIRefreshControl = {
+        let control = UIRefreshControl()
+        control.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        control.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        return control
+    }()
+    
+    lazy var errorView: ErrorView = {
+        let errorView = ErrorView(frame: .zero)
+        errorView.translatesAutoresizingMaskIntoConstraints = false
+        errorView.retryButtonAction = refreshData
         
-        l.text = "Oops! Something went wrong."
-        l.textColor = .white
-        l.translatesAutoresizingMaskIntoConstraints = false
-        
-        v.addSubview(l)
-        v.backgroundColor = .red
-        
-        l.centerXAnchor.constraint(equalTo: v.centerXAnchor).isActive = true
-        l.centerYAnchor.constraint(equalTo: v.centerYAnchor).isActive = true
-        
-        return v
+        return errorView
     }()
     
     var loadingView: UIActivityIndicatorView = {
+        let activityView = UIActivityIndicatorView(style: .large)
+        activityView.color = .gray
+        activityView.translatesAutoresizingMaskIntoConstraints = false
+        activityView.startAnimating()
         
-        let a = UIActivityIndicatorView(style: .large)
-        a.color = .gray
-        a.translatesAutoresizingMaskIntoConstraints = false
-        a.startAnimating()
-        
-        return a
+        return activityView
     }()
     
 
@@ -74,12 +70,10 @@ class RaceListViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.pin(to: view)
-        
-        print("Race List VC Loaded! 😺")
     }
     
     
@@ -88,32 +82,64 @@ class RaceListViewController: UIViewController {
     private func configureView(state: State) {
         
         loadingView.isHidden = true
+        removeErrorView()
         
         switch state {
         case .initialised:
-            print("Inititalised. Lift off! 🚀")
+            print("🚀 init")
+            refreshControl.endRefreshing()
+            
         case .success (let model):
+            print("✅ success")
+            refreshControl.endRefreshing()
+            
             dataSource.model = model
             tableView.reloadData()
-            print("Successfully loaded data! ✅")
+            
         case .loading:
-            print("Loading data, please wait... ⏳")
-            loadingView.isHidden = false
+            print("⏳ loading")
+            /* Only show the central loading indicator on the initial launch
+               when we have no data, otherwise pull to refresh will indicate
+               loading to the user.
+             */
+            loadingView.isHidden = dataSource.model.isEmpty ? false : true
+            
         case .error:
-            print("Oops, something went wrong. 💥")
-            view.addSubview(errorView)
-            errorView.pin(to: view)
+            print("❌ error")
+            refreshControl.endRefreshing()
+            
+            if !view.subviews.contains(errorView) {
+                view.addSubview(errorView)
+                errorView.pin(to: view)
+                errorView.isHidden = false
+            }
         }
         
     }
     
     private func configureTableView() {
+        tableView.refreshControl = refreshControl
         tableView.pin(to: view)
         tableView.dataSource = dataSource
         tableView.delegate = self
         tableView.separatorStyle = .none
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 120
+    }
+    
+    private func removeErrorView() {
+        if view.subviews.contains(errorView) {
+            errorView.removeFromSuperview()
+        }
+    }
+    
+    
+    // MARK: Objc methods
+    
+    @objc
+    func refreshData() {
+        tableView.backgroundView = refreshControl
+        coordinator?.refreshData()
     }
     
 }

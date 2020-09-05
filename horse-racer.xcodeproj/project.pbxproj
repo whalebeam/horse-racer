@@ -27,6 +27,7 @@
 		55732115250181830012B2B0 /* RaceListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55732114250181830012B2B0 /* RaceListViewControllerTests.swift */; };
 		55732117250192280012B2B0 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55732116250192280012B2B0 /* NetworkServiceTests.swift */; };
 		558D65D82502E2820024E91E /* RaceListNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558D65D72502E2820024E91E /* RaceListNetworkService.swift */; };
+		55DC6C8225041C4D0044C211 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC6C8125041C4D0044C211 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		55732114250181830012B2B0 /* RaceListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListViewControllerTests.swift; sourceTree = "<group>"; };
 		55732116250192280012B2B0 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		558D65D72502E2820024E91E /* RaceListNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListNetworkService.swift; sourceTree = "<group>"; };
+		55DC6C8125041C4D0044C211 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				5573210E2500492B0012B2B0 /* Race.swift */,
 				5573211225017C540012B2B0 /* RaceCell.swift */,
 				558D65D72502E2820024E91E /* RaceListNetworkService.swift */,
+				55DC6C8125041C4D0044C211 /* ErrorView.swift */,
 			);
 			path = Races;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				5573211325017C540012B2B0 /* RaceCell.swift in Sources */,
 				557320F9250022D90012B2B0 /* MainViewController.swift in Sources */,
 				558D65D82502E2820024E91E /* RaceListNetworkService.swift in Sources */,
+				55DC6C8225041C4D0044C211 /* ErrorView.swift in Sources */,
 				5573210425003AB40012B2B0 /* UIView+Extension.swift in Sources */,
 				55732100250033A90012B2B0 /* RaceListCoordinator.swift in Sources */,
 			);

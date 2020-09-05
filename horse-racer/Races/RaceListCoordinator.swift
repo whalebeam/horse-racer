@@ -21,7 +21,7 @@ final class RaceListCoordinator: Coordinator {
         }
     }
     
-    // MARK: Init
+    // MARK: - Init
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -30,7 +30,7 @@ final class RaceListCoordinator: Coordinator {
      let viewController = RaceListViewController()
     
     
-    // MARK: Coordinator Logic
+    // MARK: - Coordinator Logic
     
     func start() {
         
@@ -52,9 +52,13 @@ final class RaceListCoordinator: Coordinator {
     }
     
     
-    // MARK: Networking
+    // MARK: - Networking
     
-    func fetch() {
+    func refreshData() {
+        fetch()
+    }
+    
+    private func fetch() {
         
         viewController.state = .loading
         

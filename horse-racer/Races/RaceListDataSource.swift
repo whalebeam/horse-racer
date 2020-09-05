@@ -6,7 +6,7 @@
 import UIKit
 
 
-final class RaceListDataSource: NSObject, UITableViewDataSource {
+class RaceListDataSource: NSObject, UITableViewDataSource {
     
     var model = [Race]()
     
@@ -22,7 +22,7 @@ final class RaceListDataSource: NSObject, UITableViewDataSource {
         
         let race = model[indexPath.item]
         
-        cell.nameLabel.text = "🐎 \(race.name)"
+        cell.nameLabel.text = "\(race.name) 🐎"
         cell.courseLabel.text = race.course_name
         
         return cell
