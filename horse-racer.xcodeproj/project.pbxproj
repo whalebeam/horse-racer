@@ -26,6 +26,7 @@
 		5573211325017C540012B2B0 /* RaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573211225017C540012B2B0 /* RaceCell.swift */; };
 		55732115250181830012B2B0 /* RaceListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55732114250181830012B2B0 /* RaceListViewControllerTests.swift */; };
 		55732117250192280012B2B0 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55732116250192280012B2B0 /* NetworkServiceTests.swift */; };
+		558D65D82502E2820024E91E /* RaceListNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558D65D72502E2820024E91E /* RaceListNetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		5573211225017C540012B2B0 /* RaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCell.swift; sourceTree = "<group>"; };
 		55732114250181830012B2B0 /* RaceListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListViewControllerTests.swift; sourceTree = "<group>"; };
 		55732116250192280012B2B0 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		558D65D72502E2820024E91E /* RaceListNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListNetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,9 +137,10 @@
 			children = (
 				557320FF250033A90012B2B0 /* RaceListCoordinator.swift */,
 				55732101250035130012B2B0 /* RaceListViewController.swift */,
-				5573210E2500492B0012B2B0 /* Race.swift */,
 				55732110250178B10012B2B0 /* RaceListDataSource.swift */,
+				5573210E2500492B0012B2B0 /* Race.swift */,
 				5573211225017C540012B2B0 /* RaceCell.swift */,
+				558D65D72502E2820024E91E /* RaceListNetworkService.swift */,
 			);
 			path = Races;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				55732111250178B10012B2B0 /* RaceListDataSource.swift in Sources */,
 				5573211325017C540012B2B0 /* RaceCell.swift in Sources */,
 				557320F9250022D90012B2B0 /* MainViewController.swift in Sources */,
+				558D65D82502E2820024E91E /* RaceListNetworkService.swift in Sources */,
 				5573210425003AB40012B2B0 /* UIView+Extension.swift in Sources */,
 				55732100250033A90012B2B0 /* RaceListCoordinator.swift in Sources */,
 			);
