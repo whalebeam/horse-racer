@@ -45,7 +45,6 @@ final class RaceListCoordinator: Coordinator {
     }
     
     func showRace(_ race: Race) {
-        print("attempting to show race: \(race.name)")
         
         let childCoordinator = RaceCoordinator(navigationController: navigationController, race: race)
         childCoordinators.append(childCoordinator)

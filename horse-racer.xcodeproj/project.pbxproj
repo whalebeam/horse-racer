@@ -32,6 +32,8 @@
 		55DC6C872504540B0044C211 /* RaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC6C862504540B0044C211 /* RaceViewController.swift */; };
 		55DC6C89250522BF0044C211 /* HorseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC6C88250522BF0044C211 /* HorseCell.swift */; };
 		55DC6C8F25057C460044C211 /* races_example.json in Resources */ = {isa = PBXBuildFile; fileRef = 55DC6C8E25057C460044C211 /* races_example.json */; };
+		55DC6C962505967D0044C211 /* RaceViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC6C952505967D0044C211 /* RaceViewControllerTests.swift */; };
+		55DC6C9825059C990044C211 /* RaceCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC6C9725059C990044C211 /* RaceCoordinatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		55DC6C862504540B0044C211 /* RaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewController.swift; sourceTree = "<group>"; };
 		55DC6C88250522BF0044C211 /* HorseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorseCell.swift; sourceTree = "<group>"; };
 		55DC6C8E25057C460044C211 /* races_example.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = races_example.json; sourceTree = "<group>"; };
+		55DC6C952505967D0044C211 /* RaceViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewControllerTests.swift; sourceTree = "<group>"; };
+		55DC6C9725059C990044C211 /* RaceCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCoordinatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,11 +138,11 @@
 		556EF5B524FEE6ED0056CFCE /* horse-racerTests */ = {
 			isa = PBXGroup;
 			children = (
+				55DC6C94250596650044C211 /* RaceList */,
+				55DC6C932505965C0044C211 /* Race */,
 				556EF5B624FEE6ED0056CFCE /* horse_racerTests.swift */,
 				556EF5B824FEE6ED0056CFCE /* Info.plist */,
 				5573210825003ED00012B2B0 /* MainCoordinatorTests.swift */,
-				5573210A25003FF40012B2B0 /* RaceListCoordinatorTests.swift */,
-				55732114250181830012B2B0 /* RaceListViewControllerTests.swift */,
 				55732116250192280012B2B0 /* NetworkServiceTests.swift */,
 			);
 			path = "horse-racerTests";
@@ -183,6 +187,24 @@
 				55DC6C88250522BF0044C211 /* HorseCell.swift */,
 			);
 			path = Race;
+			sourceTree = "<group>";
+		};
+		55DC6C932505965C0044C211 /* Race */ = {
+			isa = PBXGroup;
+			children = (
+				55DC6C952505967D0044C211 /* RaceViewControllerTests.swift */,
+				55DC6C9725059C990044C211 /* RaceCoordinatorTests.swift */,
+			);
+			path = Race;
+			sourceTree = "<group>";
+		};
+		55DC6C94250596650044C211 /* RaceList */ = {
+			isa = PBXGroup;
+			children = (
+				5573210A25003FF40012B2B0 /* RaceListCoordinatorTests.swift */,
+				55732114250181830012B2B0 /* RaceListViewControllerTests.swift */,
+			);
+			path = RaceList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,9 +334,11 @@
 			files = (
 				55732117250192280012B2B0 /* NetworkServiceTests.swift in Sources */,
 				556EF5B724FEE6ED0056CFCE /* horse_racerTests.swift in Sources */,
+				55DC6C9825059C990044C211 /* RaceCoordinatorTests.swift in Sources */,
 				55732115250181830012B2B0 /* RaceListViewControllerTests.swift in Sources */,
 				5573210925003ED00012B2B0 /* MainCoordinatorTests.swift in Sources */,
 				5573210B25003FF40012B2B0 /* RaceListCoordinatorTests.swift in Sources */,
+				55DC6C962505967D0044C211 /* RaceViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

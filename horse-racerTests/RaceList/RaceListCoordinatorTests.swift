@@ -24,8 +24,20 @@ final class RaceListCoordinatorTests: XCTestCase {
         
     }
     
-    func test_fetch() {
-        // TODO: once networking is setup
+    func test_showRace() {
+        
+        // Given
+        let nav = UINavigationController()
+        let sut = RaceListCoordinator(navigationController: nav, raceListViewController: RaceListViewController())
+        
+        let race = Race(name: "", courseName: "", rides: [])
+        
+        // When
+        sut.showRace(race)
+        
+        // Then
+        XCTAssertEqual(sut.navigationController.viewControllers.count, 1)
+        
     }
     
 }
