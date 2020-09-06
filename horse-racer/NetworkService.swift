@@ -5,10 +5,11 @@
 
 import Foundation
 
-enum NetworkError: Swift.Error {
+enum NetworkError: Error {
     case invalidURL
     case unableToParse
-    case statusCode
+    case invalidStatusCode(Int)
+    case invalidResponse
     case server
     case unknown
 }
@@ -17,11 +18,11 @@ enum NetworkError: Swift.Error {
 
 final class NetworkService {
     
+    private static var baseURL = "https://reqres.in/api/"
+    
     func fetch(url: URL, completion: @escaping (Result<Race, NetworkError>) -> Void) {
         
-        let urlr = URL(string: "https://reqres.in/api/users?page=2")!
-        
-        URLSession.shared.dataTask(with: urlr) { (data, response, error) in
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
             
             let decoder = JSONDecoder()
             
@@ -30,8 +31,13 @@ final class NetworkService {
                 return
             }
             
-            guard let res = response as? HTTPURLResponse, res.statusCode == 200 else {
-                completion(.failure(.statusCode))
+            guard let response = response as? HTTPURLResponse else {
+                completion(.failure(.invalidResponse))
+                return
+            }
+            
+            guard (200...299).contains(response.statusCode) else {
+                completion(.failure(.invalidStatusCode(response.statusCode)))
                 return
             }
             

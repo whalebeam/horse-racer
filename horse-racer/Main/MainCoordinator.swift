@@ -23,18 +23,19 @@ final class MainCoordinator: Coordinator {
     // MARK: Coordinator Logic
     
     func start() {
-        let viewController = MainViewController()
-        viewController.coordinator = self
+//        let viewController = MainViewController()
+//        viewController.coordinator = self
+//
+//        navigationController.pushViewController(viewController, animated: false)
         
-        navigationController.pushViewController(viewController, animated: false)
+        showRaces()
         
         // TODO?: Logic to determine Main coord, e.g. Show onboarding / racing?
     }
     
     func showRaces() {
         
-        // TODO
-        let child = RaceListCoordinator(navigationController: navigationController)
+        let child = RaceListCoordinator(navigationController: navigationController, raceListViewController: RaceListViewController())
         childCoordinators.append(child)
         child.start()
         
