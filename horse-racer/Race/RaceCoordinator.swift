@@ -14,7 +14,9 @@ final class RaceCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     
-    let viewController: RaceViewController
+    lazy var viewController: RaceViewController = {
+        return RaceViewController(viewModel: viewModel)
+    }()
     
     let viewModel: Race
     
@@ -24,15 +26,12 @@ final class RaceCoordinator: Coordinator {
     init(navigationController: UINavigationController, race: Race) {
         self.navigationController = navigationController
         self.viewModel = race
-        self.viewController = RaceViewController(viewModel: race)
     }
     
     
     // MARK: Coordinator Logic
     
     func start() {
-        
-        viewController.viewModel = viewModel
         viewController.title = viewModel.name
         viewController.coordinator = self
         

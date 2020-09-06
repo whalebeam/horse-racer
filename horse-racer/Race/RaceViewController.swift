@@ -13,11 +13,12 @@ class RaceViewController: UIViewController {
     
     private struct RaceConstants {
         static let reuseIdentifier = "HorseCell"
+        static let tableViewRowHeight: CGFloat = 120
     }
     
     // MARK: Properties
     
-    var viewModel: Race
+    private let viewModel: Race
     
     var tableView = UITableView()
     
@@ -76,9 +77,7 @@ class RaceViewController: UIViewController {
     }
     
     private func configureLayout() {
-        
         NSLayoutConstraint.activate([
-        
             segmentControl.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 20),
             segmentControl.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             segmentControl.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
@@ -87,9 +86,7 @@ class RaceViewController: UIViewController {
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
-            
         ])
-        
     }
     
     private func configureSegmentControl() {
@@ -107,7 +104,7 @@ class RaceViewController: UIViewController {
         tableView.dataSource = dataSource
         tableView.register(HorseCell.self, forCellReuseIdentifier: RaceConstants.reuseIdentifier)
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 120
+        tableView.estimatedRowHeight = RaceConstants.tableViewRowHeight
         tableView.delegate = self
     }
     
@@ -119,17 +116,12 @@ class RaceViewController: UIViewController {
         
         switch category {
         case .cloth:
-            print("cloth")
-            
             sortedRides = viewModel.rides.sorted { $0.clothNumber < $1.clothNumber }
-            
         case .odds:
-            print("odds")
-            
+            // TODO: in the future make this sort properly
             sortedRides = viewModel.rides.sorted { $0.currentOdds < $1.currentOdds }
-            
         case .form:
-            print("form")
+            // TODO: in the future make this sort properly
             sortedRides = viewModel.rides.sorted { $0.formSummary < $1.formSummary }
         }
 
@@ -168,6 +160,7 @@ class RaceViewController: UIViewController {
     
 }
 
+// MARK: UITableViewDelegate
 
 extension RaceViewController: UITableViewDelegate {
             
@@ -181,6 +174,7 @@ extension RaceViewController: UITableViewDelegate {
         let ride = items[indexPath.row]
         
         if let url = URL(string: ride.url) {
+
             coordinator?.showWebPage(raceURL: url)
         }
 

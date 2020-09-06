@@ -60,7 +60,7 @@ final class RaceListViewControllerTests: XCTestCase {
         
         // Given
         let sut = RaceListViewController()
-        let dummyModel = [Race(name: "test", courseName: "test", age: "", time: "test")]
+        let dummyModel: [Race] = []
         
         // When
         sut.state = .success(dummyModel)
