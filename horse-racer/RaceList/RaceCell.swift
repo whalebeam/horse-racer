@@ -2,9 +2,6 @@
 //  RaceCell.swift
 //  horse-racer
 //
-//  Created by David Gray on 03/09/2020.
-//  Copyright © 2020 whalebeam. All rights reserved.
-//
 
 import UIKit
 

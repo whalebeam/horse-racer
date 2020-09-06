@@ -125,6 +125,7 @@ class RaceListViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 120
+        tableView.backgroundView = refreshControl
     }
     
     private func removeErrorView() {
@@ -138,7 +139,7 @@ class RaceListViewController: UIViewController {
     
     @objc
     func refreshData() {
-        tableView.backgroundView = refreshControl
+//        tableView.backgroundView = refreshControl
         coordinator?.refreshData()
     }
     
