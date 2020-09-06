@@ -26,7 +26,7 @@ struct Race: Decodable, Equatable {
 }
 
 
-struct Ride: Decodable, Equatable {
+struct Ride: Decodable, Hashable {
     let clothNumber: Int
     let formSummary: String
     let currentOdds: String

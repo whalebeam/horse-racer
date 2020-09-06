@@ -21,7 +21,7 @@ class RaceViewController: UIViewController {
     
     var tableView = UITableView()
     
-    typealias DataSource = UITableViewDiffableDataSource<Section, Horse>
+    typealias DataSource = UITableViewDiffableDataSource<Section, Ride>
     
     var dataSource: DataSource!
     
@@ -105,36 +105,37 @@ class RaceViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = dataSource
         tableView.register(HorseCell.self, forCellReuseIdentifier: RaceConstants.reuseIdentifier)
-        tableView.separatorStyle = .none
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 120
     }
     
     private func updateDataSource(animated: Bool, sortBy category: SortingCategory = .cloth) {
         
-        var snapshot = NSDiffableDataSourceSnapshot<Section, Horse>()
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Ride>()
         
-        var sortedHorses: [Horse] = []
+        var sortedRides: [Ride] = []
         
         switch category {
         case .cloth:
             print("cloth")
             
-            sortedHorses = viewModel.rides.sorted { $0.clothNumber < $1.clothNumber }.map { $0.horse }
+            sortedRides = viewModel.rides.sorted { $0.clothNumber < $1.clothNumber }
             
         case .odds:
             print("odds")
             
-            sortedHorses = viewModel.rides.sorted { $0.currentOdds < $1.currentOdds }.map { $0.horse }
+            sortedRides = viewModel.rides.sorted { $0.currentOdds < $1.currentOdds }
             
         case .form:
             print("form")
-            sortedHorses = viewModel.rides.sorted { $0.formSummary < $1.formSummary }.map { $0.horse }
+            sortedRides = viewModel.rides.sorted { $0.formSummary < $1.formSummary }
         }
         
         
         
         snapshot.appendSections(Section.allCases)
         
-        snapshot.appendItems(sortedHorses, toSection: .race)
+        snapshot.appendItems(sortedRides, toSection: .race)
         
         dataSource.apply(snapshot, animatingDifferences: animated)
         
@@ -142,11 +143,14 @@ class RaceViewController: UIViewController {
     }
     
     private func configureDataSource() {
-        dataSource = UITableViewDiffableDataSource<Section, Horse>(tableView: tableView) { tableView, indexPath, horse -> UITableViewCell? in
+        dataSource = UITableViewDiffableDataSource<Section, Ride>(tableView: tableView) { tableView, indexPath, ride in
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: RaceConstants.reuseIdentifier, for: indexPath)
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: RaceConstants.reuseIdentifier, for: indexPath) as? HorseCell else {
+                return UITableViewCell()
+            }
             
-            cell.textLabel?.text = horse.name
+            cell.horse = ride.horse
+            cell.lastRunLabel.text = "Days since last run: \(ride.horse.days_since_last_run)"
             
             return cell
             

@@ -30,6 +30,7 @@
 		55DC6C8225041C4D0044C211 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC6C8125041C4D0044C211 /* ErrorView.swift */; };
 		55DC6C85250453FE0044C211 /* RaceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC6C84250453FE0044C211 /* RaceCoordinator.swift */; };
 		55DC6C872504540B0044C211 /* RaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC6C862504540B0044C211 /* RaceViewController.swift */; };
+		55DC6C89250522BF0044C211 /* HorseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC6C88250522BF0044C211 /* HorseCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		55DC6C8125041C4D0044C211 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		55DC6C84250453FE0044C211 /* RaceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCoordinator.swift; sourceTree = "<group>"; };
 		55DC6C862504540B0044C211 /* RaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewController.swift; sourceTree = "<group>"; };
+		55DC6C88250522BF0044C211 /* HorseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorseCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 			children = (
 				55DC6C84250453FE0044C211 /* RaceCoordinator.swift */,
 				55DC6C862504540B0044C211 /* RaceViewController.swift */,
+				55DC6C88250522BF0044C211 /* HorseCell.swift */,
 			);
 			path = Race;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				5573210F2500492B0012B2B0 /* Race.swift in Sources */,
 				5573210D250046B50012B2B0 /* NetworkService.swift in Sources */,
 				556EF5A224FEE6EC0056CFCE /* SceneDelegate.swift in Sources */,
+				55DC6C89250522BF0044C211 /* HorseCell.swift in Sources */,
 				55732111250178B10012B2B0 /* RaceListDataSource.swift in Sources */,
 				55DC6C85250453FE0044C211 /* RaceCoordinator.swift in Sources */,
 				5573211325017C540012B2B0 /* RaceCell.swift in Sources */,
