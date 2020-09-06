@@ -28,6 +28,8 @@
 		55732117250192280012B2B0 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55732116250192280012B2B0 /* NetworkServiceTests.swift */; };
 		558D65D82502E2820024E91E /* RaceListNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558D65D72502E2820024E91E /* RaceListNetworkService.swift */; };
 		55DC6C8225041C4D0044C211 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC6C8125041C4D0044C211 /* ErrorView.swift */; };
+		55DC6C85250453FE0044C211 /* RaceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC6C84250453FE0044C211 /* RaceCoordinator.swift */; };
+		55DC6C872504540B0044C211 /* RaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC6C862504540B0044C211 /* RaceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		55732116250192280012B2B0 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		558D65D72502E2820024E91E /* RaceListNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListNetworkService.swift; sourceTree = "<group>"; };
 		55DC6C8125041C4D0044C211 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		55DC6C84250453FE0044C211 /* RaceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCoordinator.swift; sourceTree = "<group>"; };
+		55DC6C862504540B0044C211 /* RaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +111,9 @@
 		556EF59E24FEE6EC0056CFCE /* horse-racer */ = {
 			isa = PBXGroup;
 			children = (
+				55DC6C83250453EB0044C211 /* Race */,
 				5573210725003E500012B2B0 /* Main */,
-				557320FE250032C80012B2B0 /* Races */,
+				557320FE250032C80012B2B0 /* RaceList */,
 				556EF59F24FEE6EC0056CFCE /* AppDelegate.swift */,
 				556EF5A124FEE6EC0056CFCE /* SceneDelegate.swift */,
 				556EF5A824FEE6EC0056CFCE /* Assets.xcassets */,
@@ -134,7 +139,7 @@
 			path = "horse-racerTests";
 			sourceTree = "<group>";
 		};
-		557320FE250032C80012B2B0 /* Races */ = {
+		557320FE250032C80012B2B0 /* RaceList */ = {
 			isa = PBXGroup;
 			children = (
 				557320FF250033A90012B2B0 /* RaceListCoordinator.swift */,
@@ -145,7 +150,7 @@
 				558D65D72502E2820024E91E /* RaceListNetworkService.swift */,
 				55DC6C8125041C4D0044C211 /* ErrorView.swift */,
 			);
-			path = Races;
+			path = RaceList;
 			sourceTree = "<group>";
 		};
 		5573210525003CDF0012B2B0 /* Extensions */ = {
@@ -163,6 +168,15 @@
 				557320F8250022D90012B2B0 /* MainViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		55DC6C83250453EB0044C211 /* Race */ = {
+			isa = PBXGroup;
+			children = (
+				55DC6C84250453FE0044C211 /* RaceCoordinator.swift */,
+				55DC6C862504540B0044C211 /* RaceViewController.swift */,
+			);
+			path = Race;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,10 +287,12 @@
 				5573210D250046B50012B2B0 /* NetworkService.swift in Sources */,
 				556EF5A224FEE6EC0056CFCE /* SceneDelegate.swift in Sources */,
 				55732111250178B10012B2B0 /* RaceListDataSource.swift in Sources */,
+				55DC6C85250453FE0044C211 /* RaceCoordinator.swift in Sources */,
 				5573211325017C540012B2B0 /* RaceCell.swift in Sources */,
 				557320F9250022D90012B2B0 /* MainViewController.swift in Sources */,
 				558D65D82502E2820024E91E /* RaceListNetworkService.swift in Sources */,
 				55DC6C8225041C4D0044C211 /* ErrorView.swift in Sources */,
+				55DC6C872504540B0044C211 /* RaceViewController.swift in Sources */,
 				5573210425003AB40012B2B0 /* UIView+Extension.swift in Sources */,
 				55732100250033A90012B2B0 /* RaceListCoordinator.swift in Sources */,
 			);

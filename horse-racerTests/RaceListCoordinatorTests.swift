@@ -12,7 +12,7 @@ final class RaceListCoordinatorTests: XCTestCase {
         
         // Given
         let nav = UINavigationController()
-        let sut = RaceListCoordinator(navigationController: nav)
+        let sut = RaceListCoordinator(navigationController: nav, raceListViewController: RaceListViewController())
         
         // When
         sut.start()

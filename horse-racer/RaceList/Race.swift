@@ -7,14 +7,14 @@ import Foundation
 
 struct Race: Decodable, Equatable {
     let name: String
-    let course_name: String
+    let courseName: String
     let age: String
     let distance: String = ""
     let time: String // TODO: Change this
-    let ride_count: Int = 0
-    let race_stage: String = ""
+    let rideCount: Int = 0
+    let raceStage: String = ""
     let going: String = ""
-    let has_handicap: Bool = false
+    let hasHandicap: Bool = false
     let hidden: Bool = false
     let rides: [Ride] = []
 }

@@ -7,37 +7,37 @@ import UIKit
 
 final class RaceCell: UITableViewCell {
     
+    private struct RaceCellConstants {
+        static let cellCornerRadius: CGFloat = 10
+        static let cellBackgroundColorName = "race_list_cell_background"
+        static let cellStackViewPadding: CGFloat = 15
+    }
+    
     // MARK: Properties
 
     static let reuseIdentifier = "RaceCell"
     
-    var nameLabel: UILabel = {
-        let l = UILabel()
-        l.translatesAutoresizingMaskIntoConstraints = false
-        l.numberOfLines = 0
-        l.font = UIFont.preferredFont(forTextStyle: .title2)
-        l.adjustsFontForContentSizeCategory = true
-        
-        return l
+    lazy var nameLabel: UILabel = {
+        return createLabel(font: UIFont.preferredFont(forTextStyle: .title2))
     }()
     
-    var courseLabel: UILabel = {
-        let l = UILabel()
-        l.translatesAutoresizingMaskIntoConstraints = false
-        l.numberOfLines = 0
-        l.font = UIFont.preferredFont(forTextStyle: .headline)
-        l.adjustsFontForContentSizeCategory = true
-        
-        return l
+    lazy var courseLabel: UILabel = {
+        return createLabel(font: UIFont.preferredFont(forTextStyle: .headline))
     }()
     
     var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.distribution = .fillEqually
+        stackView.distribution = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         return stackView
+    }()
+    
+    let containerView: UIView = {
+        let container = UIView()
+        container.translatesAutoresizingMaskIntoConstraints = false
+        return container
     }()
     
     
@@ -46,16 +46,21 @@ final class RaceCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        contentView.addSubview(stackView)
-        stackView.pin(to: contentView, padding: 20)
+        
+        containerView.addSubview(stackView)
+        stackView.pin(to: containerView, padding: RaceCellConstants.cellStackViewPadding)
         
         stackView.addArrangedSubview(nameLabel)
         stackView.addArrangedSubview(courseLabel)
         
-        contentView.backgroundColor = UIColor(named: "race_list_cell_background_color")
+        contentView.addSubview(containerView)
         
-        contentView.layer.cornerRadius = 10
-        contentView.clipsToBounds = true
+        configureConstraints()
+        
+        containerView.backgroundColor = UIColor(named: RaceCellConstants.cellBackgroundColorName)
+        
+        containerView.layer.cornerRadius = RaceCellConstants.cellCornerRadius
+        containerView.clipsToBounds = true
     }
     
     required init?(coder: NSCoder) {
@@ -63,12 +68,26 @@ final class RaceCell: UITableViewCell {
     }
     
     
-    // MARK: View lifecycle
+    // MARK: Helper
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20))
+    private func createLabel(font: UIFont) -> UILabel {
+        
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
+        label.font = font
+        label.adjustsFontForContentSizeCategory = true
+        
+        return label
+    }
+    
+    private func configureConstraints() {
+        NSLayoutConstraint.activate([
+            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
+        ])
     }
     
 }

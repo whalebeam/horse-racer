@@ -17,7 +17,7 @@ final class RaceListViewControllerTests: XCTestCase {
         XCTAssertNil(sut.tableView.dataSource)
         
         // When
-        sut.viewDidLoad()
+        sut.loadView()
         
         // Then
         
@@ -60,16 +60,12 @@ final class RaceListViewControllerTests: XCTestCase {
         
         // Given
         let sut = RaceListViewController()
-        sut.dataSource = RaceListDataSource()
-        
-        let dummyModel = [Race(name: "test", course_name: "test", age: "", time: "test")]
+        let dummyModel = [Race(name: "test", courseName: "test", age: "", time: "test")]
         
         // When
         sut.state = .success(dummyModel)
         
-        
         // Then
-        XCTAssertEqual(sut.dataSource.model, dummyModel)
         XCTAssertFalse(sut.tableView.refreshControl!.isRefreshing)
         
     }

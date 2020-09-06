@@ -9,11 +9,12 @@ final class RaceListCoordinator: Coordinator {
     
     // MARK: Properties
     
-    var networkService = RaceListNetworkService()
-    let url = URL(string: "https://www.google.com")!
+    private let networkService = RaceListNetworkService()
+    private let url = URL(string: "https://www.google.com")!
     
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
+    let viewController: RaceListViewController
     
     var viewModel: [Race] = [] {
         didSet {
@@ -23,11 +24,10 @@ final class RaceListCoordinator: Coordinator {
     
     // MARK: - Init
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, raceListViewController: RaceListViewController) {
         self.navigationController = navigationController
+        self.viewController = raceListViewController
     }
-    
-     let viewController = RaceListViewController()
     
     
     // MARK: - Coordinator Logic
