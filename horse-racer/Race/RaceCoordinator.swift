@@ -34,9 +34,14 @@ final class RaceCoordinator: Coordinator {
         
         viewController.viewModel = viewModel
         viewController.title = viewModel.name
+        viewController.coordinator = self
         
         navigationController.pushViewController(viewController, animated: true)
         
+    }
+    
+    func showWebPage(raceURL: URL) {
+        // TODO: Show Web page
     }
     
 }

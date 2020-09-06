@@ -14,23 +14,26 @@ final class RaceListNetworkService {
         return ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
     }
     
-    let baseURL: String = "https://reqres.in/api/"
-    
-    var modelData = [
-        Race(name: "Maiden Plate (F & M)", courseName: "Vaal", age: "3YO Plus", time: "2017-12-15"),
-        Race(name: "Taylor Plate (F)", courseName: "Chesterfield", age: "3YO Plus", time: "2017-12-15"),
-        Race(name: "British Finals (F)", courseName: "Chesterfield", age: "3YO Plus", time: "2017-12-15"),
-        Race(name: "Li Cheng Cup (M)", courseName: "Chesterfield", age: "3YO Plus", time: "2017-12-15"),
-        Race(name: "Royal Green House Plate (F & M)", courseName: "Chesterfield", age: "3YO Plus", time: "2017-12-15"),
-        Race(name: "Alfred Cup (F)", courseName: "Chesterfield", age: "3YO Plus", time: "2017-12-15"),
-        Race(name: "Orange Plate (F & M)", courseName: "Chesterfield", age: "3YO Plus", time: "2017-12-15"),
-        Race(name: "Cyan Plate (M)", courseName: "Chesterfield", age: "3YO Plus", time: "2017-12-15")
-    ]
+    var isDebug: Bool {
+        #if DEBUG
+        return true
+        #else
+        return false
+        #endif
+    }
     
     func fetch(url: URL, completion: @escaping (Result<[Race], NetworkError>) -> Void) {
     
-        if isUnitTest {
-            completion(.success(modelData))
+        if isUnitTest || isDebug {
+            
+            let json = loadJson(filename: "races_example")
+            
+            guard let model = json else {
+                completion(.failure(.invalidResponse))
+                return
+            }
+            
+            completion(.success(model))
             return
         }
         
@@ -38,49 +41,54 @@ final class RaceListNetworkService {
             
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
-            
+
             guard error == nil else {
                 completion(.failure(.server))
                 return
             }
-            
+
             guard let res = response as? HTTPURLResponse, res.statusCode == 200 else {
                 completion(.failure(.invalidStatusCode(500)))
                 return
             }
-            
+
             guard let response = response as? HTTPURLResponse else {
                 completion(.failure(.invalidResponse))
                 return
             }
-            
+
             guard (200...299).contains(response.statusCode) else {
                 completion(.failure(.invalidStatusCode(response.statusCode)))
                 return
             }
+
+            guard let d = data, let model = try? decoder.decode([Race].self, from: d) else {
+                completion(.failure(.unableToParse))
+                return
+            }
             
-//            guard let d = data, let m = try? decoder.decode([[Race]].self, from: d) else {
-//                completion(.failure(.unableToParse))
-//                return
-//            }
-            
-            // success
-            
-            let modelData = [
-                Race(name: "Maiden Plate (F & M)", courseName: "Vaal", age: "3YO Plus", time: "2017-12-15"),
-                Race(name: "Taylor Plate (F)", courseName: "Chesterfield", age: "3YO Plus", time: "2017-12-15"),
-                Race(name: "British Finals (F)", courseName: "Chesterfield", age: "3YO Plus", time: "2017-12-15"),
-                Race(name: "Li Cheng Cup (M)", courseName: "Chesterfield", age: "3YO Plus", time: "2017-12-15"),
-                Race(name: "Royal Green House Plate (F & M)", courseName: "Chesterfield", age: "3YO Plus", time: "2017-12-15"),
-                Race(name: "Alfred Cup (F)", courseName: "Chesterfield", age: "3YO Plus", time: "2017-12-15"),
-                Race(name: "Orange Plate (F & M)", courseName: "Chesterfield", age: "3YO Plus", time: "2017-12-15"),
-                Race(name: "Cyan Plate (M)", courseName: "Chesterfield", age: "3YO Plus", time: "2017-12-15")
-                
-            ]
-            
-            completion(.success(modelData))
+            completion(.success(model))
             
         }.resume()
         
     }
+}
+
+extension RaceListNetworkService {
+    
+    func loadJson(filename fileName: String) -> [Race]? {
+        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let jsonData = try decoder.decode([Race].self, from: data)
+                return jsonData
+            } catch {
+                print("error:\(error)")
+            }
+        }
+        return nil
+    }
+    
 }

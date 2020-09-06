@@ -9,56 +9,51 @@
 import UIKit
 
 final class HorseCell: UITableViewCell {
+
     
     // MARK: Properties
     
     let nameLabel: UILabel = {
-       
+
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         label.font = UIFont.preferredFont(forTextStyle: .headline)
-        
+
         return label
-        
+
     }()
-    
+
     let lastRunLabel: UILabel = {
-       
+
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         label.font = UIFont.preferredFont(forTextStyle: .subheadline)
-        
+
         return label
-        
+
     }()
     
-//    var oddsView: UIView = {
-//
-//        let oddsView = UIView()
-//        oddsView.translatesAutoresizingMaskIntoConstraints = false
-//        oddsView.backgroundColor = .systemGray6
-//        oddsView.clipsToBounds = true
-//        oddsView.layer.cornerRadius = 8
-//
-//        let oddsLabel = UILabel()
-//        oddsLabel.translatesAutoresizingMaskIntoConstraints = false
-//        oddsLabel.text = "5/2"
-//
-//
-//        oddsView.addSubview(oddsLabel)
-//
-//
-//        oddsLabel.pin(to: oddsView, padding: 20)
-//
-//        return oddsView
-//
-//    }()
+    let oddsLabel: UILabel = {
+        
+       let label = UILabel()
+       label.translatesAutoresizingMaskIntoConstraints = false
+       label.numberOfLines = 0
+       label.font = UIFont.preferredFont(forTextStyle: .subheadline)
+
+       return label
+    }()
     
     var horse: Horse? {
-        didSet { nameLabel.text = horse?.name }
+        didSet {
+            if let horse = horse, let cloth = clothNumber {
+                nameLabel.text = "🐎 \(horse.name) (\(cloth))"
+            }
+        }
     }
+    
+    var clothNumber: Int?
     
     let containerView: UIView = {
         let view = UIView()
@@ -82,8 +77,9 @@ final class HorseCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         horseInfoStackView.addArrangedSubview(nameLabel)
-//        horseInfoStackView.addArrangedSubview(oddsView)
-
+        horseInfoStackView.addArrangedSubview(lastRunLabel)
+        horseInfoStackView.addArrangedSubview(oddsLabel)
+        
         contentView.addSubview(containerView)
         containerView.addSubview(horseInfoStackView)
 
@@ -94,7 +90,6 @@ final class HorseCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
     
     // MARK: Helpers
     
@@ -102,17 +97,8 @@ final class HorseCell: UITableViewCell {
         
         horseInfoStackView.pin(to: containerView)
         
-        NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-            
-        ])
+        containerView.pin(to: contentView, padding: 20)
         
     }
 
 }
-
-
-

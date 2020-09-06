@@ -25,6 +25,7 @@ class RaceViewController: UIViewController {
     
     var dataSource: DataSource!
     
+    var coordinator: RaceCoordinator?
     
     let segmentControl = UISegmentedControl()
     
@@ -47,6 +48,7 @@ class RaceViewController: UIViewController {
         super.loadView()
         view = UIView()
         view.backgroundColor = UIColor.systemBackground
+        configureTableView()
     }
     
     override func viewDidLoad() {
@@ -55,7 +57,6 @@ class RaceViewController: UIViewController {
         view.addSubview(tableView)
         view.addSubview(segmentControl)
         
-        configureTableView()
         configureSegmentControl()
         configureLayout()
         
@@ -107,6 +108,7 @@ class RaceViewController: UIViewController {
         tableView.register(HorseCell.self, forCellReuseIdentifier: RaceConstants.reuseIdentifier)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 120
+        tableView.delegate = self
     }
     
     private func updateDataSource(animated: Bool, sortBy category: SortingCategory = .cloth) {
@@ -130,15 +132,11 @@ class RaceViewController: UIViewController {
             print("form")
             sortedRides = viewModel.rides.sorted { $0.formSummary < $1.formSummary }
         }
-        
-        
-        
+
         snapshot.appendSections(Section.allCases)
-        
         snapshot.appendItems(sortedRides, toSection: .race)
         
         dataSource.apply(snapshot, animatingDifferences: animated)
-        
         
     }
     
@@ -149,8 +147,10 @@ class RaceViewController: UIViewController {
                 return UITableViewCell()
             }
             
+            cell.clothNumber = ride.clothNumber
             cell.horse = ride.horse
-            cell.lastRunLabel.text = "Days since last run: \(ride.horse.days_since_last_run)"
+            cell.lastRunLabel.text = "Last ran: \(ride.horse.daysSinceLastRun) days ago"
+            cell.oddsLabel.text = "Current odds: \(ride.currentOdds)"
             
             return cell
             
@@ -164,6 +164,26 @@ class RaceViewController: UIViewController {
     func segmentValueChanged() {
         let category = SortingCategory.init(rawValue: segmentControl.selectedSegmentIndex) ?? .cloth
         updateDataSource(animated: true, sortBy: category)
+    }
+    
+}
+
+
+extension RaceViewController: UITableViewDelegate {
+            
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let snapshot = dataSource.snapshot()
+        
+        let items = dataSource.snapshot().itemIdentifiers(inSection: snapshot.sectionIdentifiers[indexPath.section])
+        
+        
+        let ride = items[indexPath.row]
+        
+        if let url = URL(string: ride.url) {
+            coordinator?.showWebPage(raceURL: url)
+        }
+
     }
     
 }

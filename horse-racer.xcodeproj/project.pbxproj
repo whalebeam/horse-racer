@@ -31,6 +31,7 @@
 		55DC6C85250453FE0044C211 /* RaceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC6C84250453FE0044C211 /* RaceCoordinator.swift */; };
 		55DC6C872504540B0044C211 /* RaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC6C862504540B0044C211 /* RaceViewController.swift */; };
 		55DC6C89250522BF0044C211 /* HorseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC6C88250522BF0044C211 /* HorseCell.swift */; };
+		55DC6C8F25057C460044C211 /* races_example.json in Resources */ = {isa = PBXBuildFile; fileRef = 55DC6C8E25057C460044C211 /* races_example.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		55DC6C84250453FE0044C211 /* RaceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCoordinator.swift; sourceTree = "<group>"; };
 		55DC6C862504540B0044C211 /* RaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewController.swift; sourceTree = "<group>"; };
 		55DC6C88250522BF0044C211 /* HorseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorseCell.swift; sourceTree = "<group>"; };
+		55DC6C8E25057C460044C211 /* races_example.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = races_example.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				557320F625001E560012B2B0 /* Coordinator.swift */,
 				5573210525003CDF0012B2B0 /* Extensions */,
 				5573210C250046B50012B2B0 /* NetworkService.swift */,
+				55DC6C8E25057C460044C211 /* races_example.json */,
 			);
 			path = "horse-racer";
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55DC6C8F25057C460044C211 /* races_example.json in Resources */,
 				556EF5AC24FEE6EC0056CFCE /* LaunchScreen.storyboard in Resources */,
 				556EF5A924FEE6EC0056CFCE /* Assets.xcassets in Resources */,
 			);
