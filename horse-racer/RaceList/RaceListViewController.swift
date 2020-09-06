@@ -24,13 +24,13 @@ class RaceListViewController: UIViewController {
         }
     }
     
-    var dataSource = RaceListDataSource() {
+    private var dataSource = RaceListDataSource() {
         didSet {
             tableView.dataSource = dataSource
         }
     }
     
-    let tableView: UITableView = .init()
+    let tableView = UITableView()
     
     private let refreshControl: UIRefreshControl = {
         let control = UIRefreshControl()
@@ -60,20 +60,15 @@ class RaceListViewController: UIViewController {
     // MARK: View Lifecycle
     
     override func loadView() {
+        super.loadView()
+        
         view = UIView()
         view.addSubview(tableView)
         view.addSubview(loadingView)
+        view.backgroundColor = .systemBackground
         loadingView.center(in: view)
         
         configureTableView()
-        
-    }
-    
-    override func viewDidLoad() {
-        view.backgroundColor = .systemBackground
-        
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.pin(to: view)
     }
     
     
@@ -119,12 +114,14 @@ class RaceListViewController: UIViewController {
     
     private func configureTableView() {
         tableView.refreshControl = refreshControl
-        tableView.pin(to: view)
         tableView.dataSource = dataSource
         tableView.delegate = self
         tableView.separatorStyle = .none
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 120
+        tableView.backgroundView = refreshControl
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.pin(to: view)
     }
     
     private func removeErrorView() {
@@ -138,7 +135,6 @@ class RaceListViewController: UIViewController {
     
     @objc
     func refreshData() {
-        tableView.backgroundView = refreshControl
         coordinator?.refreshData()
     }
     

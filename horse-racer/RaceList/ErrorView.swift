@@ -6,6 +6,11 @@
 import UIKit
 
 final class ErrorView: UIView {
+    
+    private struct ErrorViewConstants {
+        static let errorLabelText = "Something went wrong while loading races."
+        static let retryButtonAccessibilityHint = "Try to fetch the data again."
+    }
 
     // MARK: Properties
     
@@ -13,7 +18,7 @@ final class ErrorView: UIView {
        
         let label = UILabel()
         
-        label.text = "Something went wrong while loading races."
+        label.text = ErrorViewConstants.errorLabelText
         label.numberOfLines = 0
         label.textColor = .systemGray
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -34,7 +39,7 @@ final class ErrorView: UIView {
         button.addTarget(self, action: #selector(retryButtonTapped), for: .touchUpInside)
         button.contentEdgeInsets = .init(top: 12, left: 0, bottom: 12, right: 0)
         
-        button.accessibilityHint = "Try to fetch the data again."
+        button.accessibilityHint = ErrorViewConstants.retryButtonAccessibilityHint
 
         return button
     }()
