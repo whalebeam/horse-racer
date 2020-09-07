@@ -1160,6 +1160,151 @@
         ]
     },
     {
+        "name": "Eplogue Plate",
+        "course_name": "Fairwright Green",
+        "age": "3YO plus",
+        "distance": "4f 214y",
+        "date": "2017-12-15",
+        "time": "10:45",
+        "ride_count": 14,
+        "race_stage": "WEIGHEDIN",
+        "going": "Good to Soft",
+        "has_handicap": false,
+        "hidden": false,
+        "rides": [
+            {
+                "cloth_number": 5,
+                "horse": {
+                    "name": "Cape Orchid",
+                    "days_since_last_run": 24,
+                    "foaled": "2013-09-28",
+                    "sex": "f"
+                },
+                "form_summary": "412-12",
+                "handicap": "9-6",
+                "current_odds": {
+                    "numerator": 25,
+                    "denominator": 1
+                },
+                "url": "https://m.skybet.com/horse-racing/"
+            },
+            {
+                "cloth_number": 1,
+                "horse": {
+                    "name": "Osculation",
+                    "days_since_last_run": 19,
+                    "foaled": "2013-09-17",
+                    "sex": "f"
+                },
+                "form_summary": "325433",
+                "handicap": "9-6",
+                "current_odds": {
+                    "numerator": 11,
+                    "denominator": 2
+                },
+                "url": "https://m.skybet.com/horse-racing/"
+            },
+            {
+                "cloth_number": 6,
+                "horse": {
+                    "name": "Casa De Var",
+                    "days_since_last_run": 28,
+                    "foaled": "2013-10-21",
+                    "sex": "f"
+                    },
+                "form_summary": "48-8191",
+                "handicap": "9-6",
+                "current_odds": {
+                    "numerator": 4,
+                    "denominator": 3
+                },
+                "url": "https://m.skybet.com/horse-racing/"
+            },
+            {
+                "cloth_number": 9,
+                "horse": {
+                    "name": "Madam Secretary",
+                    "days_since_last_run": 21,
+                    "foaled": "2013-08-08",
+                    "sex": "f"
+                    },
+                "form_summary": "226222",
+                "handicap": "9-6",
+                "current_odds": {
+                    "numerator": 11,
+                    "denominator": 1
+                },
+                "url": "https://m.skybet.com/horse-racing/"
+            },
+            {
+                "cloth_number": 10,
+                "horse": {
+                    "name": "Music Maker",
+                    "days_since_last_run": 35,
+                    "foaled": "2012-09-25",
+                    "sex": "m"
+                    },
+                "form_summary": "7467-4",
+                "handicap": "9-6",
+                "current_odds": {
+                    "numerator": 40,
+                    "denominator": 1
+                },
+                "url": "https://m.skybet.com/horse-racing/"
+            },
+            {
+                "cloth_number": 13,
+                "horse": {
+                    "name": "Twinkle Town",
+                    "days_since_last_run": 35,
+                    "foaled": "2013-09-30",
+                    "sex": "m"
+                    },
+                "form_summary": "3461",
+                "handicap": "9-6",
+                "current_odds": {
+                    "numerator": 100,
+                    "denominator": 1
+                },
+                "url": "https://m.skybet.com/horse-racing/"
+            },
+            {
+                "cloth_number": 3,
+                "horse": {
+                    "name": "Brighton Belle",
+                    "days_since_last_run": 18,
+                    "foaled": "2013-11-06",
+                    "sex": "f"
+                    },
+                "form_summary": "57687-",
+                "withdrawn" : true,
+                "handicap": "9-6",
+                "current_odds": {
+                    "numerator": 5,
+                    "denominator": 4
+                },
+                "url": "https://m.skybet.com/horse-racing/"
+            },
+            {
+                "cloth_number": 14,
+                "horse": {
+                    "name": "Vivacious Vivian",
+                    "days_since_last_run": 14,
+                    "foaled": "2013-10-24",
+                    "sex": "m"
+                    },
+                "form_summary": "0-6",
+                "handicap": "9-6",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
+                "url": "https://m.skybet.com/horse-racing/"
+            }
+            
+        ]
+    },
+    {
         "name": "Saratoga (F)",
         "course_name": "Toga Green",
         "age": "3YO plus",
