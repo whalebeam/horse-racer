@@ -22,7 +22,10 @@
                 },
                 "form_summary": "412-12",
                 "handicap": "9-6",
-                "current_odds": "5/2",
+                "current_odds": {
+                    "numerator": 25,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -35,7 +38,10 @@
                 },
                 "form_summary": "325433",
                 "handicap": "9-6",
-                "current_odds": "13/8",
+                "current_odds": {
+                    "numerator": 11,
+                    "denominator": 2
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -48,7 +54,10 @@
                     },
                 "form_summary": "48-8191",
                 "handicap": "9-6",
-                "current_odds": "11/1",
+                "current_odds": {
+                    "numerator": 4,
+                    "denominator": 3
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -61,7 +70,10 @@
                     },
                 "form_summary": "226222",
                 "handicap": "9-6",
-                "current_odds": "17/2",
+                "current_odds": {
+                    "numerator": 11,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -74,7 +86,10 @@
                     },
                 "form_summary": "7467-4",
                 "handicap": "9-6",
-                "current_odds": "14/2",
+                "current_odds": {
+                    "numerator": 40,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -87,7 +102,10 @@
                     },
                 "form_summary": "3461",
                 "handicap": "9-6",
-                "current_odds": "14/2",
+                "current_odds": {
+                    "numerator": 100,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -101,7 +119,10 @@
                 "form_summary": "57687-",
                 "withdrawn" : true,
                 "handicap": "9-6",
-                "current_odds": "33/1",
+                "current_odds": {
+                    "numerator": 5,
+                    "denominator": 4
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -114,7 +135,10 @@
                     },
                 "form_summary": "0-6",
                 "handicap": "9-6",
-                "current_odds": "28/1",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             }
             
@@ -122,7 +146,7 @@
     },
     {
         "name": "Lingfield",
-        "course_name": "Vaal",
+        "course_name": "Lindenwood",
         "age": "3YO plus",
         "distance": "4f 214y",
         "date": "2017-12-15",
@@ -143,7 +167,10 @@
                 },
                 "form_summary": "412-12",
                 "handicap": "9-6",
-                "current_odds": "5/2",
+                "current_odds": {
+                    "numerator": 100,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -156,7 +183,10 @@
                 },
                 "form_summary": "325433",
                 "handicap": "9-6",
-                "current_odds": "13/8",
+                "current_odds": {
+                    "numerator": 26,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -169,7 +199,10 @@
                     },
                 "form_summary": "48-8191",
                 "handicap": "9-6",
-                "current_odds": "11/1",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -182,7 +215,10 @@
                     },
                 "form_summary": "226222",
                 "handicap": "9-6",
-                "current_odds": "17/2",
+               "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -195,7 +231,10 @@
                     },
                 "form_summary": "7467-4",
                 "handicap": "9-6",
-                "current_odds": "14/2",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -208,7 +247,10 @@
                     },
                 "form_summary": "3461",
                 "handicap": "9-6",
-                "current_odds": "14/2",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -222,7 +264,10 @@
                 "form_summary": "57687-",
                 "withdrawn" : true,
                 "handicap": "9-6",
-                "current_odds": "33/1",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -235,7 +280,10 @@
                     },
                 "form_summary": "0-6",
                 "handicap": "9-6",
-                "current_odds": "28/1",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             }
             
@@ -264,7 +312,10 @@
                 },
                 "form_summary": "412-12",
                 "handicap": "9-6",
-                "current_odds": "5/2",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -277,7 +328,10 @@
                 },
                 "form_summary": "325433",
                 "handicap": "9-6",
-                "current_odds": "13/8",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -290,7 +344,10 @@
                     },
                 "form_summary": "48-8191",
                 "handicap": "9-6",
-                "current_odds": "11/1",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -303,7 +360,10 @@
                     },
                 "form_summary": "226222",
                 "handicap": "9-6",
-                "current_odds": "17/2",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -316,7 +376,10 @@
                     },
                 "form_summary": "7467-4",
                 "handicap": "9-6",
-                "current_odds": "14/2",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -329,7 +392,10 @@
                     },
                 "form_summary": "3461",
                 "handicap": "9-6",
-                "current_odds": "14/2",
+                "current_odds": {
+                    "numerator": 25,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -343,7 +409,10 @@
                 "form_summary": "57687-",
                 "withdrawn" : true,
                 "handicap": "9-6",
-                "current_odds": "33/1",
+               "current_odds": {
+                    "numerator": 12,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -356,15 +425,18 @@
                     },
                 "form_summary": "0-6",
                 "handicap": "9-6",
-                "current_odds": "28/1",
+                "current_odds": {
+                    "numerator": 29,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             }
             
         ]
     },
     {
-        "name": "Maiden Plate (F & M)",
-        "course_name": "Vaal",
+        "name": "Ross Plate (F & M)",
+        "course_name": "Fife Open",
         "age": "3YO plus",
         "distance": "4f 214y",
         "date": "2017-12-15",
@@ -385,7 +457,10 @@
                 },
                 "form_summary": "412-12",
                 "handicap": "9-6",
-                "current_odds": "5/2",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -398,7 +473,10 @@
                 },
                 "form_summary": "325433",
                 "handicap": "9-6",
-                "current_odds": "13/8",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -411,7 +489,10 @@
                     },
                 "form_summary": "48-8191",
                 "handicap": "9-6",
-                "current_odds": "11/1",
+                "current_odds": {
+                    "numerator": 24,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -424,7 +505,10 @@
                     },
                 "form_summary": "226222",
                 "handicap": "9-6",
-                "current_odds": "17/2",
+                "current_odds": {
+                    "numerator": 7,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -437,7 +521,10 @@
                     },
                 "form_summary": "7467-4",
                 "handicap": "9-6",
-                "current_odds": "14/2",
+                "current_odds": {
+                    "numerator": 11,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -450,7 +537,10 @@
                     },
                 "form_summary": "3461",
                 "handicap": "9-6",
-                "current_odds": "14/2",
+                "current_odds": {
+                    "numerator": 99,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -464,7 +554,10 @@
                 "form_summary": "57687-",
                 "withdrawn" : true,
                 "handicap": "9-6",
-                "current_odds": "33/1",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -477,15 +570,18 @@
                     },
                 "form_summary": "0-6",
                 "handicap": "9-6",
-                "current_odds": "28/1",
+                "current_odds": {
+                    "numerator": 55,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             }
             
         ]
     },
     {
-        "name": "Maiden Plate (F & M)",
-        "course_name": "Vaal",
+        "name": "Brentford Plate",
+        "course_name": "Cyan Green",
         "age": "3YO plus",
         "distance": "4f 214y",
         "date": "2017-12-15",
@@ -506,7 +602,10 @@
                 },
                 "form_summary": "412-12",
                 "handicap": "9-6",
-                "current_odds": "5/2",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -519,7 +618,10 @@
                 },
                 "form_summary": "325433",
                 "handicap": "9-6",
-                "current_odds": "13/8",
+               "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -532,7 +634,10 @@
                     },
                 "form_summary": "48-8191",
                 "handicap": "9-6",
-                "current_odds": "11/1",
+               "current_odds": {
+                    "numerator": 32,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -545,7 +650,10 @@
                     },
                 "form_summary": "226222",
                 "handicap": "9-6",
-                "current_odds": "17/2",
+               "current_odds": {
+                    "numerator": 42,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -558,7 +666,10 @@
                     },
                 "form_summary": "7467-4",
                 "handicap": "9-6",
-                "current_odds": "14/2",
+                "current_odds": {
+                    "numerator": 25,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -571,7 +682,10 @@
                     },
                 "form_summary": "3461",
                 "handicap": "9-6",
-                "current_odds": "14/2",
+               "current_odds": {
+                    "numerator": 87,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -585,7 +699,10 @@
                 "form_summary": "57687-",
                 "withdrawn" : true,
                 "handicap": "9-6",
-                "current_odds": "33/1",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -598,15 +715,18 @@
                     },
                 "form_summary": "0-6",
                 "handicap": "9-6",
-                "current_odds": "28/1",
+                "current_odds": {
+                    "numerator": 45,
+                    "denominator": 2
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             }
             
         ]
     },
     {
-        "name": "Maiden Plate (F & M)",
-        "course_name": "Vaal",
+        "name": "Perthshire Plate",
+        "course_name": "York",
         "age": "3YO plus",
         "distance": "4f 214y",
         "date": "2017-12-15",
@@ -627,7 +747,10 @@
                 },
                 "form_summary": "412-12",
                 "handicap": "9-6",
-                "current_odds": "5/2",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -640,7 +763,10 @@
                 },
                 "form_summary": "325433",
                 "handicap": "9-6",
-                "current_odds": "13/8",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -653,7 +779,10 @@
                     },
                 "form_summary": "48-8191",
                 "handicap": "9-6",
-                "current_odds": "11/1",
+                "current_odds": {
+                    "numerator": 23,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -666,7 +795,10 @@
                     },
                 "form_summary": "226222",
                 "handicap": "9-6",
-                "current_odds": "17/2",
+                "current_odds": {
+                    "numerator": 59,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -679,7 +811,10 @@
                     },
                 "form_summary": "7467-4",
                 "handicap": "9-6",
-                "current_odds": "14/2",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -692,7 +827,10 @@
                     },
                 "form_summary": "3461",
                 "handicap": "9-6",
-                "current_odds": "14/2",
+                "current_odds": {
+                    "numerator": 24,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -706,7 +844,10 @@
                 "form_summary": "57687-",
                 "withdrawn" : true,
                 "handicap": "9-6",
-                "current_odds": "33/1",
+                "current_odds": {
+                    "numerator": 52,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -719,7 +860,10 @@
                     },
                 "form_summary": "0-6",
                 "handicap": "9-6",
-                "current_odds": "28/1",
+               "current_odds": {
+                    "numerator": 44,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             }
             
@@ -748,7 +892,10 @@
                 },
                 "form_summary": "412-12",
                 "handicap": "9-6",
-                "current_odds": "5/2",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -761,7 +908,10 @@
                 },
                 "form_summary": "325433",
                 "handicap": "9-6",
-                "current_odds": "13/8",
+                "current_odds": {
+                    "numerator": 5,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -774,7 +924,10 @@
                     },
                 "form_summary": "48-8191",
                 "handicap": "9-6",
-                "current_odds": "11/1",
+                "current_odds": {
+                    "numerator": 11,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -787,7 +940,10 @@
                     },
                 "form_summary": "226222",
                 "handicap": "9-6",
-                "current_odds": "17/2",
+               "current_odds": {
+                    "numerator": 90,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -800,7 +956,10 @@
                     },
                 "form_summary": "7467-4",
                 "handicap": "9-6",
-                "current_odds": "14/2",
+                "current_odds": {
+                    "numerator": 11,
+                    "denominator": 2
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -813,7 +972,10 @@
                     },
                 "form_summary": "3461",
                 "handicap": "9-6",
-                "current_odds": "14/2",
+                "current_odds": {
+                    "numerator": 7,
+                    "denominator": 2
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -827,7 +989,10 @@
                 "form_summary": "57687-",
                 "withdrawn" : true,
                 "handicap": "9-6",
-                "current_odds": "33/1",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -840,7 +1005,10 @@
                     },
                 "form_summary": "0-6",
                 "handicap": "9-6",
-                "current_odds": "28/1",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             }
             
@@ -869,7 +1037,10 @@
                 },
                 "form_summary": "412-12",
                 "handicap": "9-6",
-                "current_odds": "5/2",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -882,7 +1053,10 @@
                 },
                 "form_summary": "325433",
                 "handicap": "9-6",
-                "current_odds": "13/8",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -895,7 +1069,10 @@
                     },
                 "form_summary": "48-8191",
                 "handicap": "9-6",
-                "current_odds": "11/1",
+                "current_odds": {
+                    "numerator": 26,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -908,7 +1085,10 @@
                     },
                 "form_summary": "226222",
                 "handicap": "9-6",
-                "current_odds": "17/2",
+                "current_odds": {
+                    "numerator": 25,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -921,7 +1101,10 @@
                     },
                 "form_summary": "7467-4",
                 "handicap": "9-6",
-                "current_odds": "14/2",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -934,7 +1117,10 @@
                     },
                 "form_summary": "3461",
                 "handicap": "9-6",
-                "current_odds": "14/2",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -948,7 +1134,10 @@
                 "form_summary": "57687-",
                 "withdrawn" : true,
                 "handicap": "9-6",
-                "current_odds": "33/1",
+                "current_odds": {
+                    "numerator": 26,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -961,7 +1150,10 @@
                     },
                 "form_summary": "0-6",
                 "handicap": "9-6",
-                "current_odds": "28/1",
+                "current_odds": {
+                    "numerator": 95,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             }
             
@@ -969,7 +1161,7 @@
     },
     {
         "name": "Saratoga (F)",
-        "course_name": "Vaal",
+        "course_name": "Toga Green",
         "age": "3YO plus",
         "distance": "4f 214y",
         "date": "2017-12-15",
@@ -990,7 +1182,10 @@
                 },
                 "form_summary": "412-12",
                 "handicap": "9-6",
-                "current_odds": "5/2",
+                "current_odds": {
+                    "numerator": 3,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -1003,7 +1198,10 @@
                 },
                 "form_summary": "325433",
                 "handicap": "9-6",
-                "current_odds": "13/8",
+               "current_odds": {
+                    "numerator": 123,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -1016,7 +1214,10 @@
                     },
                 "form_summary": "48-8191",
                 "handicap": "9-6",
-                "current_odds": "11/1",
+                "current_odds": {
+                    "numerator": 2,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -1029,7 +1230,10 @@
                     },
                 "form_summary": "226222",
                 "handicap": "9-6",
-                "current_odds": "17/2",
+               "current_odds": {
+                    "numerator": 87,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -1042,7 +1246,10 @@
                     },
                 "form_summary": "7467-4",
                 "handicap": "9-6",
-                "current_odds": "14/2",
+                "current_odds": {
+                    "numerator": 3,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -1055,7 +1262,10 @@
                     },
                 "form_summary": "3461",
                 "handicap": "9-6",
-                "current_odds": "14/2",
+                "current_odds": {
+                    "numerator": 1,
+                    "denominator": 3
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -1069,7 +1279,10 @@
                 "form_summary": "57687-",
                 "withdrawn" : true,
                 "handicap": "9-6",
-                "current_odds": "33/1",
+                "current_odds": {
+                    "numerator": 1,
+                    "denominator": 3
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             },
             {
@@ -1082,10 +1295,15 @@
                     },
                 "form_summary": "0-6",
                 "handicap": "9-6",
-                "current_odds": "28/1",
+                "current_odds": {
+                    "numerator": 100,
+                    "denominator": 1
+                },
                 "url": "https://m.skybet.com/horse-racing/"
             }
             
         ]
     }
 ]
+
+

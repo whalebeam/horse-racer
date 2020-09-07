@@ -5,8 +5,12 @@
 
 import Foundation
 
-
-// TODO: Fix networking to pull in from a local json file
+enum NetworkError: Error {
+    case invalidStatusCode(Int)
+    case invalidResponse
+    case server
+    case unableToParse
+}
 
 final class RaceListNetworkService {
     

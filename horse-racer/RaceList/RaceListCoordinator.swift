@@ -13,8 +13,10 @@ final class RaceListCoordinator: Coordinator {
     private let url = URL(string: "https://www.google.com")!
     
     var childCoordinators = [Coordinator]()
-    var navigationController: UINavigationController
+    let navigationController: UINavigationController
     let viewController: RaceListViewController
+    
+    private weak var parentCoordinator: MainCoordinator?
     
     var viewModel: [Race] = [] {
         didSet {
@@ -37,7 +39,7 @@ final class RaceListCoordinator: Coordinator {
         viewController.coordinator = self
         viewController.title = "Live Races"
         
-        viewController.tableView.register(RaceCell.self, forCellReuseIdentifier: RaceCell.reuseIdentifier)
+        viewController.tableView.register(RaceListCell.self, forCellReuseIdentifier: RaceListCell.reuseIdentifier)
         
         navigationController.pushViewController(viewController, animated: true)
         
@@ -46,9 +48,11 @@ final class RaceListCoordinator: Coordinator {
     
     func showRace(_ race: Race) {
         
-        let childCoordinator = RaceCoordinator(navigationController: navigationController, race: race)
-        childCoordinators.append(childCoordinator)
-        childCoordinator.start()
+        let raceCoordintor = RaceCoordinator(navigationController: navigationController, race: race)
+        raceCoordintor.parentCoordinator = self
+        
+        childCoordinators.append(raceCoordintor)
+        raceCoordintor.start()
     }
     
     
@@ -77,4 +81,15 @@ final class RaceListCoordinator: Coordinator {
         
     }
     
+    // MARK: Coordinator Lifecycle
+    
+    func didFinish() {
+        parentCoordinator?.childFinished(coordinator: self)
+    }
+    
+    func childFinished(coordinator: Coordinator?) {
+        if let coordinator = coordinator {
+            remove(child: coordinator)
+        }
+    }
 }

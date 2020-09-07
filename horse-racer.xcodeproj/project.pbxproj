@@ -7,25 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5506046F2505A4F200EDDE96 /* WebCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5506046E2505A4F200EDDE96 /* WebCoordinator.swift */; };
+		550604712505A64F00EDDE96 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550604702505A64F00EDDE96 /* WebViewController.swift */; };
+		553B5B8C2506921000375B35 /* WebScriptMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B5B8B2506921000375B35 /* WebScriptMessageHandler.swift */; };
+		553B5B8F2506A18400375B35 /* WebViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B5B8E2506A18400375B35 /* WebViewControllerTests.swift */; };
+		553B5B912506A31000375B35 /* WebCoordintorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B5B902506A31000375B35 /* WebCoordintorTests.swift */; };
+		553B5B932506AEAD00375B35 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B5B922506AEAD00375B35 /* UIColor+Extension.swift */; };
 		556EF5A024FEE6EC0056CFCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EF59F24FEE6EC0056CFCE /* AppDelegate.swift */; };
 		556EF5A224FEE6EC0056CFCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EF5A124FEE6EC0056CFCE /* SceneDelegate.swift */; };
 		556EF5A924FEE6EC0056CFCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556EF5A824FEE6EC0056CFCE /* Assets.xcassets */; };
 		556EF5AC24FEE6EC0056CFCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556EF5AA24FEE6EC0056CFCE /* LaunchScreen.storyboard */; };
-		556EF5B724FEE6ED0056CFCE /* horse_racerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EF5B624FEE6ED0056CFCE /* horse_racerTests.swift */; };
 		557320F725001E560012B2B0 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557320F625001E560012B2B0 /* Coordinator.swift */; };
-		557320F9250022D90012B2B0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557320F8250022D90012B2B0 /* MainViewController.swift */; };
 		557320FB250022EA0012B2B0 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557320FA250022EA0012B2B0 /* MainCoordinator.swift */; };
 		55732100250033A90012B2B0 /* RaceListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557320FF250033A90012B2B0 /* RaceListCoordinator.swift */; };
 		55732102250035130012B2B0 /* RaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55732101250035130012B2B0 /* RaceListViewController.swift */; };
 		5573210425003AB40012B2B0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573210325003AB40012B2B0 /* UIView+Extension.swift */; };
 		5573210925003ED00012B2B0 /* MainCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573210825003ED00012B2B0 /* MainCoordinatorTests.swift */; };
 		5573210B25003FF40012B2B0 /* RaceListCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573210A25003FF40012B2B0 /* RaceListCoordinatorTests.swift */; };
-		5573210D250046B50012B2B0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573210C250046B50012B2B0 /* NetworkService.swift */; };
 		5573210F2500492B0012B2B0 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573210E2500492B0012B2B0 /* Race.swift */; };
 		55732111250178B10012B2B0 /* RaceListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55732110250178B10012B2B0 /* RaceListDataSource.swift */; };
-		5573211325017C540012B2B0 /* RaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573211225017C540012B2B0 /* RaceCell.swift */; };
+		5573211325017C540012B2B0 /* RaceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573211225017C540012B2B0 /* RaceListCell.swift */; };
 		55732115250181830012B2B0 /* RaceListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55732114250181830012B2B0 /* RaceListViewControllerTests.swift */; };
-		55732117250192280012B2B0 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55732116250192280012B2B0 /* NetworkServiceTests.swift */; };
 		558D65D82502E2820024E91E /* RaceListNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558D65D72502E2820024E91E /* RaceListNetworkService.swift */; };
 		55DC6C8225041C4D0044C211 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC6C8125041C4D0044C211 /* ErrorView.swift */; };
 		55DC6C85250453FE0044C211 /* RaceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DC6C84250453FE0044C211 /* RaceCoordinator.swift */; };
@@ -47,6 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5506046E2505A4F200EDDE96 /* WebCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebCoordinator.swift; sourceTree = "<group>"; };
+		550604702505A64F00EDDE96 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		553B5B8B2506921000375B35 /* WebScriptMessageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScriptMessageHandler.swift; sourceTree = "<group>"; };
+		553B5B8E2506A18400375B35 /* WebViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewControllerTests.swift; sourceTree = "<group>"; };
+		553B5B902506A31000375B35 /* WebCoordintorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebCoordintorTests.swift; sourceTree = "<group>"; };
+		553B5B922506AEAD00375B35 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		556EF59C24FEE6EC0056CFCE /* horse-racer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "horse-racer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		556EF59F24FEE6EC0056CFCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		556EF5A124FEE6EC0056CFCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,22 +62,18 @@
 		556EF5AB24FEE6EC0056CFCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		556EF5AD24FEE6EC0056CFCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		556EF5B224FEE6ED0056CFCE /* horse-racerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "horse-racerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		556EF5B624FEE6ED0056CFCE /* horse_racerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = horse_racerTests.swift; sourceTree = "<group>"; };
 		556EF5B824FEE6ED0056CFCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		557320F625001E560012B2B0 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		557320F8250022D90012B2B0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		557320FA250022EA0012B2B0 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		557320FF250033A90012B2B0 /* RaceListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListCoordinator.swift; sourceTree = "<group>"; };
 		55732101250035130012B2B0 /* RaceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListViewController.swift; sourceTree = "<group>"; };
 		5573210325003AB40012B2B0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		5573210825003ED00012B2B0 /* MainCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorTests.swift; sourceTree = "<group>"; };
 		5573210A25003FF40012B2B0 /* RaceListCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListCoordinatorTests.swift; sourceTree = "<group>"; };
-		5573210C250046B50012B2B0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		5573210E2500492B0012B2B0 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
 		55732110250178B10012B2B0 /* RaceListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListDataSource.swift; sourceTree = "<group>"; };
-		5573211225017C540012B2B0 /* RaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCell.swift; sourceTree = "<group>"; };
+		5573211225017C540012B2B0 /* RaceListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListCell.swift; sourceTree = "<group>"; };
 		55732114250181830012B2B0 /* RaceListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListViewControllerTests.swift; sourceTree = "<group>"; };
-		55732116250192280012B2B0 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		558D65D72502E2820024E91E /* RaceListNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListNetworkService.swift; sourceTree = "<group>"; };
 		55DC6C8125041C4D0044C211 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		55DC6C84250453FE0044C211 /* RaceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCoordinator.swift; sourceTree = "<group>"; };
@@ -98,6 +102,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5506046D2505A4DA00EDDE96 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				5506046E2505A4F200EDDE96 /* WebCoordinator.swift */,
+				550604702505A64F00EDDE96 /* WebViewController.swift */,
+				553B5B8B2506921000375B35 /* WebScriptMessageHandler.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		553B5B8D2506A12900375B35 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				553B5B8E2506A18400375B35 /* WebViewControllerTests.swift */,
+				553B5B902506A31000375B35 /* WebCoordintorTests.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
 		556EF59324FEE6EC0056CFCE = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +142,7 @@
 		556EF59E24FEE6EC0056CFCE /* horse-racer */ = {
 			isa = PBXGroup;
 			children = (
+				5506046D2505A4DA00EDDE96 /* Web */,
 				55DC6C83250453EB0044C211 /* Race */,
 				5573210725003E500012B2B0 /* Main */,
 				557320FE250032C80012B2B0 /* RaceList */,
@@ -129,7 +153,6 @@
 				556EF5AD24FEE6EC0056CFCE /* Info.plist */,
 				557320F625001E560012B2B0 /* Coordinator.swift */,
 				5573210525003CDF0012B2B0 /* Extensions */,
-				5573210C250046B50012B2B0 /* NetworkService.swift */,
 				55DC6C8E25057C460044C211 /* races_example.json */,
 			);
 			path = "horse-racer";
@@ -138,12 +161,11 @@
 		556EF5B524FEE6ED0056CFCE /* horse-racerTests */ = {
 			isa = PBXGroup;
 			children = (
+				553B5B8D2506A12900375B35 /* Web */,
 				55DC6C94250596650044C211 /* RaceList */,
 				55DC6C932505965C0044C211 /* Race */,
-				556EF5B624FEE6ED0056CFCE /* horse_racerTests.swift */,
 				556EF5B824FEE6ED0056CFCE /* Info.plist */,
 				5573210825003ED00012B2B0 /* MainCoordinatorTests.swift */,
-				55732116250192280012B2B0 /* NetworkServiceTests.swift */,
 			);
 			path = "horse-racerTests";
 			sourceTree = "<group>";
@@ -154,8 +176,7 @@
 				557320FF250033A90012B2B0 /* RaceListCoordinator.swift */,
 				55732101250035130012B2B0 /* RaceListViewController.swift */,
 				55732110250178B10012B2B0 /* RaceListDataSource.swift */,
-				5573210E2500492B0012B2B0 /* Race.swift */,
-				5573211225017C540012B2B0 /* RaceCell.swift */,
+				5573211225017C540012B2B0 /* RaceListCell.swift */,
 				558D65D72502E2820024E91E /* RaceListNetworkService.swift */,
 				55DC6C8125041C4D0044C211 /* ErrorView.swift */,
 			);
@@ -166,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				5573210325003AB40012B2B0 /* UIView+Extension.swift */,
+				553B5B922506AEAD00375B35 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -174,7 +196,6 @@
 			isa = PBXGroup;
 			children = (
 				557320FA250022EA0012B2B0 /* MainCoordinator.swift */,
-				557320F8250022D90012B2B0 /* MainViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -185,6 +206,7 @@
 				55DC6C84250453FE0044C211 /* RaceCoordinator.swift */,
 				55DC6C862504540B0044C211 /* RaceViewController.swift */,
 				55DC6C88250522BF0044C211 /* HorseCell.swift */,
+				5573210E2500492B0012B2B0 /* Race.swift */,
 			);
 			path = Race;
 			sourceTree = "<group>";
@@ -308,22 +330,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				553B5B932506AEAD00375B35 /* UIColor+Extension.swift in Sources */,
+				550604712505A64F00EDDE96 /* WebViewController.swift in Sources */,
 				557320F725001E560012B2B0 /* Coordinator.swift in Sources */,
+				5506046F2505A4F200EDDE96 /* WebCoordinator.swift in Sources */,
 				557320FB250022EA0012B2B0 /* MainCoordinator.swift in Sources */,
 				55732102250035130012B2B0 /* RaceListViewController.swift in Sources */,
 				556EF5A024FEE6EC0056CFCE /* AppDelegate.swift in Sources */,
 				5573210F2500492B0012B2B0 /* Race.swift in Sources */,
-				5573210D250046B50012B2B0 /* NetworkService.swift in Sources */,
 				556EF5A224FEE6EC0056CFCE /* SceneDelegate.swift in Sources */,
 				55DC6C89250522BF0044C211 /* HorseCell.swift in Sources */,
 				55732111250178B10012B2B0 /* RaceListDataSource.swift in Sources */,
 				55DC6C85250453FE0044C211 /* RaceCoordinator.swift in Sources */,
-				5573211325017C540012B2B0 /* RaceCell.swift in Sources */,
-				557320F9250022D90012B2B0 /* MainViewController.swift in Sources */,
+				5573211325017C540012B2B0 /* RaceListCell.swift in Sources */,
 				558D65D82502E2820024E91E /* RaceListNetworkService.swift in Sources */,
 				55DC6C8225041C4D0044C211 /* ErrorView.swift in Sources */,
 				55DC6C872504540B0044C211 /* RaceViewController.swift in Sources */,
 				5573210425003AB40012B2B0 /* UIView+Extension.swift in Sources */,
+				553B5B8C2506921000375B35 /* WebScriptMessageHandler.swift in Sources */,
 				55732100250033A90012B2B0 /* RaceListCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,13 +356,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55732117250192280012B2B0 /* NetworkServiceTests.swift in Sources */,
-				556EF5B724FEE6ED0056CFCE /* horse_racerTests.swift in Sources */,
+				553B5B912506A31000375B35 /* WebCoordintorTests.swift in Sources */,
 				55DC6C9825059C990044C211 /* RaceCoordinatorTests.swift in Sources */,
 				55732115250181830012B2B0 /* RaceListViewControllerTests.swift in Sources */,
 				5573210925003ED00012B2B0 /* MainCoordinatorTests.swift in Sources */,
 				5573210B25003FF40012B2B0 /* RaceListCoordinatorTests.swift in Sources */,
 				55DC6C962505967D0044C211 /* RaceViewControllerTests.swift in Sources */,
+				553B5B8F2506A18400375B35 /* WebViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +510,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TUTL838R74;
 				INFOPLIST_FILE = "horse-racer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,6 +531,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TUTL838R74;
 				INFOPLIST_FILE = "horse-racer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -5,11 +5,10 @@
 
 import UIKit
 
-final class RaceCell: UITableViewCell {
+final class RaceListCell: UITableViewCell {
     
     private struct RaceCellConstants {
         static let cellCornerRadius: CGFloat = 10
-        static let cellBackgroundColorName = "race_list_cell_background"
         static let cellStackViewPadding: CGFloat = 15
     }
     
@@ -46,27 +45,25 @@ final class RaceCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        
         containerView.addSubview(stackView)
-        stackView.pin(to: containerView, padding: RaceCellConstants.cellStackViewPadding)
         
         stackView.addArrangedSubview(nameLabel)
         stackView.addArrangedSubview(courseLabel)
+        stackView.pin(to: containerView, padding: RaceCellConstants.cellStackViewPadding)
         
         contentView.addSubview(containerView)
         
         configureConstraints()
-        
-        containerView.backgroundColor = UIColor(named: RaceCellConstants.cellBackgroundColorName)
-        
-        containerView.layer.cornerRadius = RaceCellConstants.cellCornerRadius
-        containerView.clipsToBounds = true
+        configureContainerView()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func didMoveToWindow() {
+        configureAccessibility()
+    }
     
     // MARK: Helper
     
@@ -88,6 +85,30 @@ final class RaceCell: UITableViewCell {
             containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
         ])
+    }
+    
+    private func configureContainerView() {
+        containerView.backgroundColor = .raceCellBackgroundColor
+        containerView.layer.cornerRadius = RaceCellConstants.cellCornerRadius
+        containerView.clipsToBounds = true
+    }
+    
+    private func configureAccessibility() {
+        
+        guard let name = nameLabel.text, let course = courseLabel.text else { return }
+        
+        isAccessibilityElement = true
+        accessibilityLabel = "\(name) race taking place at \(course)"
+        accessibilityHint = "Tap to view race details"
+        accessibilityTraits = .button
+        
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        accessibilityHint = ""
+        accessibilityLabel = ""
     }
     
 }

@@ -26,9 +26,21 @@ class RaceViewController: UIViewController {
     
     var dataSource: DataSource!
     
-    var coordinator: RaceCoordinator?
+    weak var coordinator: RaceCoordinator?
     
-    let segmentControl = UISegmentedControl()
+    private let segmentControl = UISegmentedControl()
+    
+    private var sortByLabel: UILabel = {
+        let label = UILabel()
+        
+        label.font = UIFont.preferredFont(forTextStyle: .headline)
+        label.numberOfLines = 0
+        label.text = "Sort by:"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.adjustsFontForContentSizeCategory = true
+        
+        return label
+    }()
     
     
     // MARK: Init
@@ -40,6 +52,10 @@ class RaceViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit {
+        coordinator?.didFinish()
     }
     
     
@@ -55,8 +71,9 @@ class RaceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(tableView)
+        view.addSubview(sortByLabel)
         view.addSubview(segmentControl)
+        view.addSubview(tableView)
         
         configureSegmentControl()
         configureLayout()
@@ -66,7 +83,6 @@ class RaceViewController: UIViewController {
         configureDataSource()
         updateDataSource(animated: true, sortBy: .cloth)
     }
-    
     
     // MARK: Helpers
     
@@ -78,7 +94,12 @@ class RaceViewController: UIViewController {
     
     private func configureLayout() {
         NSLayoutConstraint.activate([
-            segmentControl.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 20),
+            
+            sortByLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 20),
+            sortByLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            sortByLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20),
+            
+            segmentControl.topAnchor.constraint(equalTo: sortByLabel.bottomAnchor, constant: 20),
             segmentControl.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             segmentControl.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
@@ -118,8 +139,7 @@ class RaceViewController: UIViewController {
         case .cloth:
             sortedRides = viewModel.rides.sorted { $0.clothNumber < $1.clothNumber }
         case .odds:
-            // TODO: in the future make this sort properly
-            sortedRides = viewModel.rides.sorted { $0.currentOdds < $1.currentOdds }
+            sortedRides = viewModel.rides.sorted { $0.currentOdds.value > $1.currentOdds.value }
         case .form:
             // TODO: in the future make this sort properly
             sortedRides = viewModel.rides.sorted { $0.formSummary < $1.formSummary }
@@ -142,7 +162,7 @@ class RaceViewController: UIViewController {
             cell.clothNumber = ride.clothNumber
             cell.horse = ride.horse
             cell.lastRunLabel.text = "Last ran: \(ride.horse.daysSinceLastRun) days ago"
-            cell.oddsLabel.text = "Current odds: \(ride.currentOdds)"
+            cell.oddsLabel.text = "Current odds: \(ride.currentOdds.text)"
             
             return cell
             
@@ -177,7 +197,10 @@ extension RaceViewController: UITableViewDelegate {
 
             coordinator?.showWebPage(raceURL: url)
         }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
 
     }
     
 }
+ 
