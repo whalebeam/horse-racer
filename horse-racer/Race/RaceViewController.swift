@@ -28,9 +28,9 @@ class RaceViewController: UIViewController {
     
     weak var coordinator: RaceCoordinator?
     
-    let segmentControl = UISegmentedControl()
+    private let segmentControl = UISegmentedControl()
     
-    var sortByLabel: UILabel = {
+    private var sortByLabel: UILabel = {
         let label = UILabel()
         
         label.font = UIFont.preferredFont(forTextStyle: .headline)
