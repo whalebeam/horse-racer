@@ -19,7 +19,6 @@ extension Coordinator {
     func remove(child: Coordinator) {
         for (index, coordinator) in childCoordinators.enumerated() {
             if coordinator === child {
-                
                 childCoordinators.remove(at: index)
                 break
             }
