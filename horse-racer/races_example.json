@@ -122,7 +122,7 @@
     },
     {
         "name": "Lingfield",
-        "course_name": "Vaal",
+        "course_name": "Lindenwood",
         "age": "3YO plus",
         "distance": "4f 214y",
         "date": "2017-12-15",
@@ -363,8 +363,8 @@
         ]
     },
     {
-        "name": "Maiden Plate (F & M)",
-        "course_name": "Vaal",
+        "name": "Ross Plate (F & M)",
+        "course_name": "Fife Open",
         "age": "3YO plus",
         "distance": "4f 214y",
         "date": "2017-12-15",
@@ -484,8 +484,8 @@
         ]
     },
     {
-        "name": "Maiden Plate (F & M)",
-        "course_name": "Vaal",
+        "name": "Brentford Plate",
+        "course_name": "Cyan Green",
         "age": "3YO plus",
         "distance": "4f 214y",
         "date": "2017-12-15",
@@ -605,8 +605,8 @@
         ]
     },
     {
-        "name": "Maiden Plate (F & M)",
-        "course_name": "Vaal",
+        "name": "Perthshire Plate",
+        "course_name": "York",
         "age": "3YO plus",
         "distance": "4f 214y",
         "date": "2017-12-15",
@@ -969,7 +969,7 @@
     },
     {
         "name": "Saratoga (F)",
-        "course_name": "Vaal",
+        "course_name": "Toga Green",
         "age": "3YO plus",
         "distance": "4f 214y",
         "date": "2017-12-15",
@@ -1089,3 +1089,4 @@
         ]
     }
 ]
+

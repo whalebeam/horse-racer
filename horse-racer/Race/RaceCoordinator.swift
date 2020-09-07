@@ -12,6 +12,8 @@ final class RaceCoordinator: Coordinator {
     
     var childCoordinators = [Coordinator]()
     
+    var parentCoordinator: RaceListCoordinator?
+    
     var navigationController: UINavigationController
     
     lazy var viewController: RaceViewController = {
@@ -40,7 +42,12 @@ final class RaceCoordinator: Coordinator {
     }
     
     func showWebPage(raceURL: URL) {
-        // TODO: Show Web page
+        
+        let webCoordinator = WebCoordinator(navigationController: navigationController, url: raceURL)
+        
+        childCoordinators.append(webCoordinator)
+        
+        webCoordinator.start()
     }
     
 }

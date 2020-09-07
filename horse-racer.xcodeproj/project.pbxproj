@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5506046F2505A4F200EDDE96 /* WebCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5506046E2505A4F200EDDE96 /* WebCoordinator.swift */; };
+		550604712505A64F00EDDE96 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550604702505A64F00EDDE96 /* WebViewController.swift */; };
 		556EF5A024FEE6EC0056CFCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EF59F24FEE6EC0056CFCE /* AppDelegate.swift */; };
 		556EF5A224FEE6EC0056CFCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EF5A124FEE6EC0056CFCE /* SceneDelegate.swift */; };
 		556EF5A924FEE6EC0056CFCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556EF5A824FEE6EC0056CFCE /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5506046E2505A4F200EDDE96 /* WebCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebCoordinator.swift; sourceTree = "<group>"; };
+		550604702505A64F00EDDE96 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		556EF59C24FEE6EC0056CFCE /* horse-racer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "horse-racer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		556EF59F24FEE6EC0056CFCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		556EF5A124FEE6EC0056CFCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +102,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5506046D2505A4DA00EDDE96 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				5506046E2505A4F200EDDE96 /* WebCoordinator.swift */,
+				550604702505A64F00EDDE96 /* WebViewController.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
 		556EF59324FEE6EC0056CFCE = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +132,7 @@
 		556EF59E24FEE6EC0056CFCE /* horse-racer */ = {
 			isa = PBXGroup;
 			children = (
+				5506046D2505A4DA00EDDE96 /* Web */,
 				55DC6C83250453EB0044C211 /* Race */,
 				5573210725003E500012B2B0 /* Main */,
 				557320FE250032C80012B2B0 /* RaceList */,
@@ -308,7 +322,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550604712505A64F00EDDE96 /* WebViewController.swift in Sources */,
 				557320F725001E560012B2B0 /* Coordinator.swift in Sources */,
+				5506046F2505A4F200EDDE96 /* WebCoordinator.swift in Sources */,
 				557320FB250022EA0012B2B0 /* MainCoordinator.swift in Sources */,
 				55732102250035130012B2B0 /* RaceListViewController.swift in Sources */,
 				556EF5A024FEE6EC0056CFCE /* AppDelegate.swift in Sources */,

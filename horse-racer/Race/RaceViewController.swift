@@ -67,7 +67,6 @@ class RaceViewController: UIViewController {
         updateDataSource(animated: true, sortBy: .cloth)
     }
     
-    
     // MARK: Helpers
     
     enum SortingCategory: Int {
@@ -177,6 +176,8 @@ extension RaceViewController: UITableViewDelegate {
 
             coordinator?.showWebPage(raceURL: url)
         }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
 
     }
     

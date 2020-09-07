@@ -81,18 +81,15 @@ class RaceListViewController: UIViewController {
         
         switch state {
         case .initialised:
-            print("🚀 init")
             refreshControl.endRefreshing()
             
         case .success (let model):
-            print("✅ success")
             refreshControl.endRefreshing()
             
             dataSource.model = model
             tableView.reloadData()
             
         case .loading:
-            print("⏳ loading")
             /* Only show the central loading indicator on the initial launch
                when we have no data, otherwise pull to refresh will indicate
                loading to the user.
@@ -100,7 +97,6 @@ class RaceListViewController: UIViewController {
             loadingView.isHidden = dataSource.model.isEmpty ? false : true
             
         case .error:
-            print("❌ error")
             refreshControl.endRefreshing()
             
             if !view.subviews.contains(errorView) {
@@ -148,6 +144,8 @@ extension RaceListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let race = dataSource.getRace(at: indexPath.row)
         coordinator?.showRace(race)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
