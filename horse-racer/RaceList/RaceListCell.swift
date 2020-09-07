@@ -61,6 +61,9 @@ final class RaceListCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func didMoveToWindow() {
+        configureAccessibility()
+    }
     
     // MARK: Helper
     
@@ -88,6 +91,17 @@ final class RaceListCell: UITableViewCell {
         containerView.backgroundColor = .raceCellBackgroundColor
         containerView.layer.cornerRadius = RaceCellConstants.cellCornerRadius
         containerView.clipsToBounds = true
+    }
+    
+    private func configureAccessibility() {
+        
+        guard let name = nameLabel.text, let course = courseLabel.text else { return }
+        
+        isAccessibilityElement = true
+        accessibilityLabel = "\(name) race taking place at \(course)"
+        accessibilityHint = "Tap to view race details"
+        accessibilityTraits = .button
+        
     }
     
 }
