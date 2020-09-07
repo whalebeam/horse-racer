@@ -24,7 +24,6 @@
 		5573210425003AB40012B2B0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573210325003AB40012B2B0 /* UIView+Extension.swift */; };
 		5573210925003ED00012B2B0 /* MainCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573210825003ED00012B2B0 /* MainCoordinatorTests.swift */; };
 		5573210B25003FF40012B2B0 /* RaceListCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573210A25003FF40012B2B0 /* RaceListCoordinatorTests.swift */; };
-		5573210D250046B50012B2B0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573210C250046B50012B2B0 /* NetworkService.swift */; };
 		5573210F2500492B0012B2B0 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573210E2500492B0012B2B0 /* Race.swift */; };
 		55732111250178B10012B2B0 /* RaceListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55732110250178B10012B2B0 /* RaceListDataSource.swift */; };
 		5573211325017C540012B2B0 /* RaceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5573211225017C540012B2B0 /* RaceListCell.swift */; };
@@ -71,7 +70,6 @@
 		5573210325003AB40012B2B0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		5573210825003ED00012B2B0 /* MainCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorTests.swift; sourceTree = "<group>"; };
 		5573210A25003FF40012B2B0 /* RaceListCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListCoordinatorTests.swift; sourceTree = "<group>"; };
-		5573210C250046B50012B2B0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		5573210E2500492B0012B2B0 /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
 		55732110250178B10012B2B0 /* RaceListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListDataSource.swift; sourceTree = "<group>"; };
 		5573211225017C540012B2B0 /* RaceListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListCell.swift; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 				556EF5AD24FEE6EC0056CFCE /* Info.plist */,
 				557320F625001E560012B2B0 /* Coordinator.swift */,
 				5573210525003CDF0012B2B0 /* Extensions */,
-				5573210C250046B50012B2B0 /* NetworkService.swift */,
 				55DC6C8E25057C460044C211 /* races_example.json */,
 			);
 			path = "horse-racer";
@@ -341,7 +338,6 @@
 				55732102250035130012B2B0 /* RaceListViewController.swift in Sources */,
 				556EF5A024FEE6EC0056CFCE /* AppDelegate.swift in Sources */,
 				5573210F2500492B0012B2B0 /* Race.swift in Sources */,
-				5573210D250046B50012B2B0 /* NetworkService.swift in Sources */,
 				556EF5A224FEE6EC0056CFCE /* SceneDelegate.swift in Sources */,
 				55DC6C89250522BF0044C211 /* HorseCell.swift in Sources */,
 				55732111250178B10012B2B0 /* RaceListDataSource.swift in Sources */,
