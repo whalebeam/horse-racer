@@ -39,7 +39,7 @@ class RaceListViewController: UIViewController {
         return control
     }()
     
-    lazy var errorView: ErrorView = {
+    private lazy var errorView: ErrorView = {
         let errorView = ErrorView(frame: .zero)
         errorView.translatesAutoresizingMaskIntoConstraints = false
         errorView.retryButtonAction = refreshData
@@ -47,7 +47,7 @@ class RaceListViewController: UIViewController {
         return errorView
     }()
     
-    var loadingView: UIActivityIndicatorView = {
+    private var loadingView: UIActivityIndicatorView = {
         let activityView = UIActivityIndicatorView(style: .large)
         activityView.color = .gray
         activityView.translatesAutoresizingMaskIntoConstraints = false

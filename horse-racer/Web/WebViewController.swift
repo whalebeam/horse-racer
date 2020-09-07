@@ -71,12 +71,10 @@ final class WebViewController: UIViewController {
     // MARK: Helpers
     
     func configureConstraints() {
-        
         NSLayoutConstraint.activate([
             activityIndicator.centerXAnchor.constraint(equalTo: webView.centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: webView.centerYAnchor)
         ])
-        
     }
     
     func configureAndStartWebView() {

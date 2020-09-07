@@ -12,6 +12,7 @@
 		553B5B8C2506921000375B35 /* WebScriptMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B5B8B2506921000375B35 /* WebScriptMessageHandler.swift */; };
 		553B5B8F2506A18400375B35 /* WebViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B5B8E2506A18400375B35 /* WebViewControllerTests.swift */; };
 		553B5B912506A31000375B35 /* WebCoordintorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B5B902506A31000375B35 /* WebCoordintorTests.swift */; };
+		553B5B932506AEAD00375B35 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B5B922506AEAD00375B35 /* UIColor+Extension.swift */; };
 		556EF5A024FEE6EC0056CFCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EF59F24FEE6EC0056CFCE /* AppDelegate.swift */; };
 		556EF5A224FEE6EC0056CFCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EF5A124FEE6EC0056CFCE /* SceneDelegate.swift */; };
 		556EF5A924FEE6EC0056CFCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556EF5A824FEE6EC0056CFCE /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		553B5B8B2506921000375B35 /* WebScriptMessageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScriptMessageHandler.swift; sourceTree = "<group>"; };
 		553B5B8E2506A18400375B35 /* WebViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewControllerTests.swift; sourceTree = "<group>"; };
 		553B5B902506A31000375B35 /* WebCoordintorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebCoordintorTests.swift; sourceTree = "<group>"; };
+		553B5B922506AEAD00375B35 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		556EF59C24FEE6EC0056CFCE /* horse-racer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "horse-racer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		556EF59F24FEE6EC0056CFCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		556EF5A124FEE6EC0056CFCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				5573210325003AB40012B2B0 /* UIView+Extension.swift */,
+				553B5B922506AEAD00375B35 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				553B5B932506AEAD00375B35 /* UIColor+Extension.swift in Sources */,
 				550604712505A64F00EDDE96 /* WebViewController.swift in Sources */,
 				557320F725001E560012B2B0 /* Coordinator.swift in Sources */,
 				5506046F2505A4F200EDDE96 /* WebCoordinator.swift in Sources */,
@@ -522,6 +526,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TUTL838R74;
 				INFOPLIST_FILE = "horse-racer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -542,6 +547,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TUTL838R74;
 				INFOPLIST_FILE = "horse-racer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

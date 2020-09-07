@@ -117,8 +117,7 @@ class RaceViewController: UIViewController {
         case .cloth:
             sortedRides = viewModel.rides.sorted { $0.clothNumber < $1.clothNumber }
         case .odds:
-            // TODO: in the future make this sort properly
-            sortedRides = viewModel.rides.sorted { $0.currentOdds < $1.currentOdds }
+            sortedRides = viewModel.rides.sorted { $0.currentOdds.value > $1.currentOdds.value }
         case .form:
             // TODO: in the future make this sort properly
             sortedRides = viewModel.rides.sorted { $0.formSummary < $1.formSummary }
@@ -141,7 +140,7 @@ class RaceViewController: UIViewController {
             cell.clothNumber = ride.clothNumber
             cell.horse = ride.horse
             cell.lastRunLabel.text = "Last ran: \(ride.horse.daysSinceLastRun) days ago"
-            cell.oddsLabel.text = "Current odds: \(ride.currentOdds)"
+            cell.oddsLabel.text = "Current odds: \(ride.currentOdds.text)"
             
             return cell
             

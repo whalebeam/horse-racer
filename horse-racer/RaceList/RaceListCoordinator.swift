@@ -13,8 +13,8 @@ final class RaceListCoordinator: Coordinator {
     private let url = URL(string: "https://www.google.com")!
     
     var childCoordinators = [Coordinator]()
-    var navigationController: UINavigationController
-    let viewController: RaceListViewController
+    let navigationController: UINavigationController
+    private let viewController: RaceListViewController
     
     var viewModel: [Race] = [] {
         didSet {

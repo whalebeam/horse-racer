@@ -9,7 +9,6 @@ final class RaceCell: UITableViewCell {
     
     private struct RaceCellConstants {
         static let cellCornerRadius: CGFloat = 10
-        static let cellBackgroundColorName = "race_list_cell_background"
         static let cellStackViewPadding: CGFloat = 15
     }
     
@@ -46,21 +45,16 @@ final class RaceCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        
         containerView.addSubview(stackView)
-        stackView.pin(to: containerView, padding: RaceCellConstants.cellStackViewPadding)
         
         stackView.addArrangedSubview(nameLabel)
         stackView.addArrangedSubview(courseLabel)
+        stackView.pin(to: containerView, padding: RaceCellConstants.cellStackViewPadding)
         
         contentView.addSubview(containerView)
         
         configureConstraints()
-        
-        containerView.backgroundColor = UIColor(named: RaceCellConstants.cellBackgroundColorName)
-        
-        containerView.layer.cornerRadius = RaceCellConstants.cellCornerRadius
-        containerView.clipsToBounds = true
+        configureContainerView()
     }
     
     required init?(coder: NSCoder) {
@@ -88,6 +82,12 @@ final class RaceCell: UITableViewCell {
             containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
         ])
+    }
+    
+    private func configureContainerView() {
+        containerView.backgroundColor = .raceCellBackgroundColor
+        containerView.layer.cornerRadius = RaceCellConstants.cellCornerRadius
+        containerView.clipsToBounds = true
     }
     
 }
