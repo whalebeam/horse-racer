@@ -1,5 +1,7 @@
 # horse-racer App
 
+![Alt text](./screenshots/logo.png "App Logo")
+
 # Description
 The horse-racer app is a simple application that allows users to navigate current horse races. Users can find the race they are interesting in and then from there navigate to the Sky Bet website.
 
@@ -24,7 +26,7 @@ Horse Logos Free - ClipArt Best
 http://www.clipartbest.com/horse-logos-free
 
 ## Screenshots
-App Launch Screen
+### App Launch Screen
 ![Alt text](./screenshots/launch_screen.png "App Launch Screen")
 
 ### Race List Screen Light
