@@ -22,7 +22,7 @@ final class WebViewController: UIViewController {
     let activityIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView()
         indicator.translatesAutoresizingMaskIntoConstraints = false
-        indicator.color = .systemBlue
+        indicator.color = .systemGray
         return indicator
     }()
     
@@ -46,11 +46,7 @@ final class WebViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        webView.addSubview(activityIndicator)
-        activityIndicator.startAnimating()
-        webView.navigationDelegate = self
-        webView.load(request)
-        
+        configureWebView()
         configureConstraints()
     }
     
@@ -64,6 +60,13 @@ final class WebViewController: UIViewController {
             activityIndicator.centerYAnchor.constraint(equalTo: webView.centerYAnchor)
         ])
         
+    }
+    
+    func configureWebView() {
+        webView.addSubview(activityIndicator)
+        webView.navigationDelegate = self
+        webView.load(request)
+        activityIndicator.startAnimating()
     }
     
 }
