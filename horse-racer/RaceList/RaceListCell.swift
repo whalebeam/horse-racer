@@ -5,7 +5,7 @@
 
 import UIKit
 
-final class RaceCell: UITableViewCell {
+final class RaceListCell: UITableViewCell {
     
     private struct RaceCellConstants {
         static let cellCornerRadius: CGFloat = 10

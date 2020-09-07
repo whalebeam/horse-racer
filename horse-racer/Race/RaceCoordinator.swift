@@ -36,7 +36,6 @@ final class RaceCoordinator: Coordinator {
     func start() {
         viewController.title = viewModel.name
         viewController.coordinator = self
-        
         navigationController.pushViewController(viewController, animated: true)
         
     }
@@ -50,4 +49,15 @@ final class RaceCoordinator: Coordinator {
         webCoordinator.start()
     }
     
+    func didFinish() {
+        parentCoordinator?.childFinished(coordinator: self)
+    }
+    
+    func childFinished(coordinator: Coordinator?) {
+        if let coordinator = coordinator {
+            remove(child: coordinator)
+        }
+    }
+    
 }
+

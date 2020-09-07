@@ -12,21 +12,7 @@ import XCTest
 
 final class RaceCoordinatorTests: XCTestCase {
     
-    let race = Race(
-        name: "Maiden Plate (F & M)",
-        courseName: "Vaal",
-        rides: [
-            Ride(clothNumber: 1,
-                 formSummary: "",
-                 currentOdds: "",
-                 horse: Horse(
-                    name: "",
-                    daysSinceLastRun: 1,
-                    foaled: "",
-                    sex: ""),
-                 url: "")
-        ]
-    )
+    let race = Race(name: "Hello World", courseName: "", age: nil, distance: nil, time: nil, rideCount: nil, raceStage: nil, going: nil, rides: [])
     
     
     func test_start() {
@@ -39,7 +25,7 @@ final class RaceCoordinatorTests: XCTestCase {
         
         sut.start()
         
-        XCTAssertEqual(sut.viewController.title, "Maiden Plate (F & M)")
+        XCTAssertEqual(sut.viewController.title, "Hello World")
         XCTAssert(sut.viewController.coordinator === sut)
         XCTAssertEqual(sut.navigationController.viewControllers.count, 1)
         

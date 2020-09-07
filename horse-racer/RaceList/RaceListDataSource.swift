@@ -21,13 +21,13 @@ class RaceListDataSource: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: RaceCell.reuseIdentifier, for: indexPath) as? RaceCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: RaceListCell.reuseIdentifier, for: indexPath) as? RaceListCell else {
             fatalError("Unable to dequeue cell, something has went wrong 💥")
         }
         
         let race = getRace(at: indexPath.item)
         
-        cell.nameLabel.text = "\(race.name) 🐎"
+        cell.nameLabel.text = "\(race.name)"
         cell.courseLabel.text = race.courseName
         
         return cell

@@ -14,7 +14,9 @@ final class RaceListCoordinator: Coordinator {
     
     var childCoordinators = [Coordinator]()
     let navigationController: UINavigationController
-    private let viewController: RaceListViewController
+    let viewController: RaceListViewController
+    
+    private weak var parentCoordinator: MainCoordinator?
     
     var viewModel: [Race] = [] {
         didSet {
@@ -37,7 +39,7 @@ final class RaceListCoordinator: Coordinator {
         viewController.coordinator = self
         viewController.title = "Live Races"
         
-        viewController.tableView.register(RaceCell.self, forCellReuseIdentifier: RaceCell.reuseIdentifier)
+        viewController.tableView.register(RaceListCell.self, forCellReuseIdentifier: RaceListCell.reuseIdentifier)
         
         navigationController.pushViewController(viewController, animated: true)
         
@@ -79,4 +81,15 @@ final class RaceListCoordinator: Coordinator {
         
     }
     
+    // MARK: Coordinator Lifecycle
+    
+    func didFinish() {
+        parentCoordinator?.childFinished(coordinator: self)
+    }
+    
+    func childFinished(coordinator: Coordinator?) {
+        if let coordinator = coordinator {
+            remove(child: coordinator)
+        }
+    }
 }

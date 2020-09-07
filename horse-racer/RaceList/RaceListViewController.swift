@@ -56,7 +56,14 @@ class RaceListViewController: UIViewController {
         return activityView
     }()
     
+    
+    // MARK: Init
+    
+    deinit {
+        coordinator?.didFinish()
+    }
 
+    
     // MARK: View Lifecycle
     
     override func loadView() {

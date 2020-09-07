@@ -30,7 +30,7 @@ final class RaceListCoordinatorTests: XCTestCase {
         let nav = UINavigationController()
         let sut = RaceListCoordinator(navigationController: nav, raceListViewController: RaceListViewController())
         
-        let race = Race(name: "", courseName: "", rides: [])
+        let race = Race(name: "", courseName: "", age: nil, distance: nil, time: nil, rideCount: nil, raceStage: nil, going: nil, rides: [])
         
         // When
         sut.showRace(race)

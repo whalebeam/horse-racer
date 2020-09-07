@@ -55,6 +55,10 @@ final class WebViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        coordinator?.didFinish()
+    }
+    
     
     // MARK: View Lifecycle
     

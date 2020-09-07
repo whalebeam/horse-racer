@@ -15,6 +15,8 @@ final class WebCoordinator: Coordinator {
     
     let viewController: WebViewController
     
+    weak var parentCoordinator: Coordinator?
+    
     
     // MARK: Init
     
@@ -32,5 +34,17 @@ final class WebCoordinator: Coordinator {
         
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func didFinish() {
+        parentCoordinator?.childFinished(coordinator: self)
+    }
+    
+    func childFinished(coordinator: Coordinator?) {
+        if let coordinator = coordinator {
+            remove(child: coordinator)
+        }
+    }
+    
+    
     
 }

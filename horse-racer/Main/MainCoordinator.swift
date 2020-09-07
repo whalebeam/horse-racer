@@ -5,7 +5,7 @@
 
 import UIKit
 
-final class MainCoordinator: Coordinator {
+final class MainCoordinator: NSObject, Coordinator {
     
     // MARK: Properties
     
@@ -23,14 +23,10 @@ final class MainCoordinator: Coordinator {
     // MARK: Coordinator Logic
     
     func start() {
-//        let viewController = MainViewController()
-//        viewController.coordinator = self
-//
-//        navigationController.pushViewController(viewController, animated: false)
-        
+        navigationController.delegate = self
+        // Could have future cases where we want to show onboarding
+        // but for now show the races coordinator.
         showRaces()
-        
-        // TODO?: Logic to determine Main coord, e.g. Show onboarding / racing?
     }
     
     func showRaces() {
@@ -39,6 +35,30 @@ final class MainCoordinator: Coordinator {
         childCoordinators.append(child)
         child.start()
         
+    }
+    
+    func childFinished(coordinator: Coordinator?) {
+        if let coordinator = coordinator {
+            navigationController.delegate = self
+            remove(child: coordinator)
+        }
+    }
+    
+}
+
+extension MainCoordinator: UINavigationControllerDelegate {
+    
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        
+        guard let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from) else {
+            return
+        }
+
+        guard navigationController.viewControllers.contains(fromViewController) == false else { return }
+
+        if let viewController = fromViewController as? RaceListViewController {
+            childFinished(coordinator: viewController.coordinator)
+        }
     }
     
 }

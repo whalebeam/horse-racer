@@ -26,9 +26,21 @@ class RaceViewController: UIViewController {
     
     var dataSource: DataSource!
     
-    var coordinator: RaceCoordinator?
+    weak var coordinator: RaceCoordinator?
     
     let segmentControl = UISegmentedControl()
+    
+    var sortByLabel: UILabel = {
+        let label = UILabel()
+        
+        label.font = UIFont.preferredFont(forTextStyle: .headline)
+        label.numberOfLines = 0
+        label.text = "Sort by:"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.adjustsFontForContentSizeCategory = true
+        
+        return label
+    }()
     
     
     // MARK: Init
@@ -40,6 +52,10 @@ class RaceViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit {
+        coordinator?.didFinish()
     }
     
     
@@ -55,8 +71,9 @@ class RaceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(tableView)
+        view.addSubview(sortByLabel)
         view.addSubview(segmentControl)
+        view.addSubview(tableView)
         
         configureSegmentControl()
         configureLayout()
@@ -77,7 +94,12 @@ class RaceViewController: UIViewController {
     
     private func configureLayout() {
         NSLayoutConstraint.activate([
-            segmentControl.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 20),
+            
+            sortByLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 20),
+            sortByLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            sortByLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20),
+            
+            segmentControl.topAnchor.constraint(equalTo: sortByLabel.bottomAnchor, constant: 20),
             segmentControl.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             segmentControl.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
@@ -181,3 +203,4 @@ extension RaceViewController: UITableViewDelegate {
     }
     
 }
+ 
