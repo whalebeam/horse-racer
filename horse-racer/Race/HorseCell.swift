@@ -88,6 +88,11 @@ final class HorseCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func didMoveToWindow() {
+        configureAccessibility()
+    }
+    
+    
     // MARK: Helpers
     
     func configureConstraints() {
@@ -96,6 +101,24 @@ final class HorseCell: UITableViewCell {
         
         containerView.pin(to: contentView, padding: 20)
         
+    }
+    
+    private func configureAccessibility() {
+        
+        guard let cloth = clothNumber, let name = horse?.name, let odds = oddsLabel.text else { return }
+        
+        isAccessibilityElement = true
+        accessibilityLabel = "Horse \(name) at cloth number \(cloth). \(odds)"
+        accessibilityHint = "Tap to place a bet on this horse online"
+        accessibilityTraits = .button
+        
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        accessibilityHint = ""
+        accessibilityLabel = ""
     }
 
 }

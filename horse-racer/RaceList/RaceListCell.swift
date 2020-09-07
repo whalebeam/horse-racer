@@ -104,4 +104,11 @@ final class RaceListCell: UITableViewCell {
         
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        accessibilityHint = ""
+        accessibilityLabel = ""
+    }
+    
 }
