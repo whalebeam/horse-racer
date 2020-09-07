@@ -14,13 +14,29 @@ The horse-racer app is a simple application that allows users to navigate curren
 - The app make use of accessibility labels so that Voice Over users can still navigate the app an know what is happening on screen.
 
 ## Screenshots
+App Launch Screen
+![Alt text](./screenshots/launch_screen.png "App Launch Screen")
 
+Race List Screen Light
+![Alt text](./screenshots/race_list_light_mode.png "Race List Screen Light")
+
+Race List Screen Dark
+![Alt text](./screenshots/race_list_dark_mode.png "Race List Screen Dark")
+
+Race Info Screen
+![Alt text](./screenshots/race_info.png "Race Info Screen")
+
+Race Web View
+![Alt text](./screenshots/web_view.png "Race Web View")
+
+Race Info Screen Accessibility (Large Text)
+![Alt text](./screenshots/race_info_large_text.png "Race Info Screen Accessibility (Large Text)")
 
 ## Requirements
-macOS 10.15 Catalina
-Xcode 11
-iOS 13
-Swift Version 5
+- macOS 10.15 Catalina
+- Xcode 11
+- iOS 13
+- Swift Version 5
 
 ## Assets Used
 Horse Logos Free - ClipArt Best
