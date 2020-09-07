@@ -2,9 +2,6 @@
 //  WebViewController.swift
 //  horse-racer
 //
-//  Created by David Gray on 07/09/2020.
-//  Copyright © 2020 whalebeam. All rights reserved.
-//
 
 import UIKit
 import WebKit
@@ -17,7 +14,24 @@ final class WebViewController: UIViewController {
     
     weak var coordinator: WebCoordinator?
     
-    var webView = WKWebView()
+    lazy var webView: WKWebView = {
+       
+        let configuration = WKWebViewConfiguration()
+        let contentController = WKUserContentController()
+        
+        // Attach a Script Message Handler so we can be informed of JavaScript events.
+        contentController.add(scriptMessageHandler, name: "horseRacer")
+        configuration.userContentController = contentController
+
+        let webView = WKWebView(frame: .zero, configuration: configuration)
+                
+        return webView
+    }()
+    
+    let scriptMessageHandler: WebScriptMessageHandler = {
+        let handler = WebScriptMessageHandler()
+        return handler
+    }()
     
     let activityIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView()
@@ -25,6 +39,9 @@ final class WebViewController: UIViewController {
         indicator.color = .systemGray
         return indicator
     }()
+    
+    // Test Injection Override
+    lazy var load: (URLRequest) -> WKNavigation? = webView.load(_:)
     
     
     // MARK: Init
@@ -46,7 +63,7 @@ final class WebViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        configureWebView()
+        configureAndStartWebView()
         configureConstraints()
     }
     
@@ -62,15 +79,19 @@ final class WebViewController: UIViewController {
         
     }
     
-    func configureWebView() {
+    func configureAndStartWebView() {
+        scriptMessageHandler.delegate = self
         webView.addSubview(activityIndicator)
         webView.navigationDelegate = self
-        webView.load(request)
         activityIndicator.startAnimating()
+        
+        _ = load(request)
     }
     
 }
 
+
+// MARK: - WKNavigationDelegate
 
 extension WebViewController: WKNavigationDelegate {
     
@@ -82,7 +103,7 @@ extension WebViewController: WKNavigationDelegate {
         
         if navigationAction.navigationType == .linkActivated {
             
-            // Let's cancel the navigation if the user tries to navigate to a non skybet page.
+            // Cancel the navigation if the user tries to navigate to a non skybet page.
             guard let url = navigationAction.request.url, url.absoluteString.lowercased().contains("skybet") else {
                 decisionHandler(.cancel)
                 return
@@ -94,6 +115,20 @@ extension WebViewController: WKNavigationDelegate {
             decisionHandler(.allow)
         }
         
+    }
+    
+}
+
+// MARK: - WebScriptMessageHandlerDelegate
+
+extension WebViewController: WebScriptMessageHandlerDelegate {
+    
+    func handleMessage(handler: WebScriptMessageHandler, message: [String : String]) {
+        // In the future we could handle an event that the web page has sent us.
+    }
+    
+    func handleError(handler: WebScriptMessageHandler, error: MessageHandlerError) {
+        // handle the error
     }
     
 }

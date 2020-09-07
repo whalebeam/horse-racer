@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5506046F2505A4F200EDDE96 /* WebCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5506046E2505A4F200EDDE96 /* WebCoordinator.swift */; };
 		550604712505A64F00EDDE96 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550604702505A64F00EDDE96 /* WebViewController.swift */; };
+		553B5B8C2506921000375B35 /* WebScriptMessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B5B8B2506921000375B35 /* WebScriptMessageHandler.swift */; };
+		553B5B8F2506A18400375B35 /* WebViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B5B8E2506A18400375B35 /* WebViewControllerTests.swift */; };
+		553B5B912506A31000375B35 /* WebCoordintorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B5B902506A31000375B35 /* WebCoordintorTests.swift */; };
 		556EF5A024FEE6EC0056CFCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EF59F24FEE6EC0056CFCE /* AppDelegate.swift */; };
 		556EF5A224FEE6EC0056CFCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556EF5A124FEE6EC0056CFCE /* SceneDelegate.swift */; };
 		556EF5A924FEE6EC0056CFCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556EF5A824FEE6EC0056CFCE /* Assets.xcassets */; };
@@ -51,6 +54,9 @@
 /* Begin PBXFileReference section */
 		5506046E2505A4F200EDDE96 /* WebCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebCoordinator.swift; sourceTree = "<group>"; };
 		550604702505A64F00EDDE96 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		553B5B8B2506921000375B35 /* WebScriptMessageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScriptMessageHandler.swift; sourceTree = "<group>"; };
+		553B5B8E2506A18400375B35 /* WebViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewControllerTests.swift; sourceTree = "<group>"; };
+		553B5B902506A31000375B35 /* WebCoordintorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebCoordintorTests.swift; sourceTree = "<group>"; };
 		556EF59C24FEE6EC0056CFCE /* horse-racer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "horse-racer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		556EF59F24FEE6EC0056CFCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		556EF5A124FEE6EC0056CFCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +113,16 @@
 			children = (
 				5506046E2505A4F200EDDE96 /* WebCoordinator.swift */,
 				550604702505A64F00EDDE96 /* WebViewController.swift */,
+				553B5B8B2506921000375B35 /* WebScriptMessageHandler.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		553B5B8D2506A12900375B35 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				553B5B8E2506A18400375B35 /* WebViewControllerTests.swift */,
+				553B5B902506A31000375B35 /* WebCoordintorTests.swift */,
 			);
 			path = Web;
 			sourceTree = "<group>";
@@ -152,6 +168,7 @@
 		556EF5B524FEE6ED0056CFCE /* horse-racerTests */ = {
 			isa = PBXGroup;
 			children = (
+				553B5B8D2506A12900375B35 /* Web */,
 				55DC6C94250596650044C211 /* RaceList */,
 				55DC6C932505965C0044C211 /* Race */,
 				556EF5B624FEE6ED0056CFCE /* horse_racerTests.swift */,
@@ -340,6 +357,7 @@
 				55DC6C8225041C4D0044C211 /* ErrorView.swift in Sources */,
 				55DC6C872504540B0044C211 /* RaceViewController.swift in Sources */,
 				5573210425003AB40012B2B0 /* UIView+Extension.swift in Sources */,
+				553B5B8C2506921000375B35 /* WebScriptMessageHandler.swift in Sources */,
 				55732100250033A90012B2B0 /* RaceListCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,11 +368,13 @@
 			files = (
 				55732117250192280012B2B0 /* NetworkServiceTests.swift in Sources */,
 				556EF5B724FEE6ED0056CFCE /* horse_racerTests.swift in Sources */,
+				553B5B912506A31000375B35 /* WebCoordintorTests.swift in Sources */,
 				55DC6C9825059C990044C211 /* RaceCoordinatorTests.swift in Sources */,
 				55732115250181830012B2B0 /* RaceListViewControllerTests.swift in Sources */,
 				5573210925003ED00012B2B0 /* MainCoordinatorTests.swift in Sources */,
 				5573210B25003FF40012B2B0 /* RaceListCoordinatorTests.swift in Sources */,
 				55DC6C962505967D0044C211 /* RaceViewControllerTests.swift in Sources */,
+				553B5B8F2506A18400375B35 /* WebViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
