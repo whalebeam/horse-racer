@@ -33,10 +33,10 @@ Race Info Screen Accessibility (Large Text)
 ![Alt text](./screenshots/race_info_large_text.png "Race Info Screen Accessibility (Large Text)")
 
 ## Requirements
-macOS 10.15 Catalina
-Xcode 11
-iOS 13
-Swift Version 5
+- macOS 10.15 Catalina
+- Xcode 11
+- iOS 13
+- Swift Version 5
 
 ## Assets Used
 Horse Logos Free - ClipArt Best
